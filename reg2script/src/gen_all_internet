@@ -1,0 +1,21 @@
+#!/bin/sh
+
+echo "clean ..."
+
+for f in benchmark/benchmarks/*js; do
+        rm "$f"
+done
+
+for f in benchmark/benchmarks/*smt2; do
+        rm "$f"
+done
+
+rm -f -r benchmark/benchmarks/*js benchmark/benchmarks/*smt2
+
+echo "Generate all tests in internet"
+
+./reg2smt -a benchmark/internetregLib-benchmark/internetregLib
+
+echo "move the tests to a new fold"
+mv benchmark/internetregLib-benchmark/*.js benchmark/benchmarks/
+mv benchmark/internetregLib-benchmark/*.smt2 benchmark/benchmarks/

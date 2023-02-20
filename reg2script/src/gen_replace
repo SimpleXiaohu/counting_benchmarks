@@ -1,0 +1,26 @@
+#!/bin/sh
+
+echo "clean ..."
+
+rm -r -f benchmark/benchmark-replace
+
+mkdir benchmark/benchmark-replace
+
+cp benchmark/internetregLib-benchmark/internetregLib benchmark/benchmark-replace/
+
+cp benchmark/uniq-regexes-benchmark/uniq-regexes benchmark/benchmark-replace/
+
+
+echo "Generate all tests"
+
+#./reg2smt -ra benchmark/benchmark-replace/internetregLib
+./reg2smt -rb benchmark/benchmark-replace/uniq-regexes
+
+
+
+rm -f benchmark/benchmark-replace/uniq-regexes
+rm -f benchmark/benchmark-replace/internetregLib
+
+
+ls benchmark/benchmark-replace | wc -l
+

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+    ./reg2smt -c tests/tests
+
+echo "Translation done"
+

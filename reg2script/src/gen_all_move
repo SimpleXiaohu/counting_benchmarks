@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+
+echo "move the tests to a new fold"
+
+for f in benchmark/uniq-regexes-benchmark/*.smt2; do
+    mv $f benchmark/benchmarks/
+done
+
+for f in benchmark/uniq-regexes-benchmark/*.js; do
+    mv $f benchmark/benchmarks/
+done

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+echo "clean ..."
+
+rm -r -f benchmark/benchmark-match
+
+mkdir benchmark/benchmark-match
+
+cp benchmark/internetregLib-benchmark/internetregLib benchmark/benchmark-match/
+
+cp benchmark/uniq-regexes-benchmark/uniq-regexes benchmark/benchmark-match/
+
+
+echo "Generate all tests"
+
+#./reg2smt -ma benchmark/benchmark-match/internetregLib
+./reg2smt -mb benchmark/benchmark-match/uniq-regexes
+
+
+
+rm -f benchmark/benchmark-match/uniq-regexes
+rm -f benchmark/benchmark-match/internetregLib
+
+ls benchmark/benchmark-match | wc -l

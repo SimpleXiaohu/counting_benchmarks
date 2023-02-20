@@ -1,0 +1,20 @@
+#!/bin/sh
+
+echo "clean ..."
+
+rm -r -f benchmark/benchmark-match-rest
+
+mkdir benchmark/benchmark-match-rest
+
+cp benchmark/uniq-regexes-benchmark/uniq-regexes-rest benchmark/benchmark-match-rest/
+
+
+echo "Generate all tests"
+
+./reg2smt -mb benchmark/benchmark-match-rest/uniq-regexes-rest
+
+
+
+rm benchmark/benchmark-match-rest/uniq-regexes-rest
+
+ls benchmark/benchmark-match-rest | wc -l
