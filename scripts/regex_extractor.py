@@ -4,38 +4,10 @@ import argparse
 import os
 import shutil
 from datetime import datetime
-from runner import Runner, ArgParser
+from runner import RunnerInterface
 import json
 from dataclasses import dataclass
 from util import regexesCountLine
-
-
-class ScriptArgParser(ArgParser):
-    def __init__(self) -> None:
-        self.scriptname = __file__
-        super().__init__()
-        self.parser.add_argument(
-            "--format",
-            help="format of the regex benchmarks",
-            metavar="json|txt",
-            choices=["txt", "json"],
-        )
-
-        self.parser.add_argument(
-            "--subdirname",
-            default="",
-            help="name of the subdirectory where the regexes will be stored",
-            metavar="string",
-        )
-
-        self.parser.add_argument(
-            "--loop-count",
-            help="the sum of the loop counts should satisfy this condition",
-            default="all",
-            metavar="large|small|all",
-            choices=["large", "small", "all"],
-        )
-
 
 def isSmallCountRegex(regex: str):
     (isLarge, haveLoop, _) = regexesCountLine(regex)
@@ -52,34 +24,43 @@ def isCountRegex(regex: str):
     return haveLoop
 
 
-def getNeededRegexes(regexes: 'list[str]'):
-    if argparser.loop_count == "large":
+def getNeededRegexes(regexes: 'list[str]', large):
+    if large:
         return list(filter(isLargeCountRegex, regexes))
-    elif argparser.loop_count == "small":
-        return list(filter(isSmallCountRegex, regexes))
     else:
-        return list(filter(isCountRegex, regexes))
+        return list(filter(isSmallCountRegex, regexes))
 
 
 @dataclass
-class TxtExtractor(Runner):
+class TxtExtractor(RunnerInterface):
     extension: str = "txt"
+    large: bool = True
+
+    def write_results(self, results: "list[str]"):
+        resfile_prefix = "large" if self.large else "small"
+        with open(os.path.join(self.outdir, f"{resfile_prefix}_regexes.txt"), "w", encoding="ascii") as f:
+            for result in results:
+                f.write(f"{result}{os.linesep}")
 
     def run_single_instance(self, benchmark: str):
-
         regexes = []
         REGEX_RE = re.compile(r"^\"(.*)\";.*")
-
-        with open(benchmark, "r") as f:
+        with open(benchmark, "r", encoding="utf8") as f:
             lines = f.readlines()
             for line in lines:
                 if REGEX_RE.match(line):
                     regexes.append(REGEX_RE.match(line).group(1))
-        return "\n".join(getNeededRegexes(set(regexes)))
-
+        return "\n".join(getNeededRegexes(set(regexes), large=self.large))
+@dataclass
+class TxtExtractorLarge(TxtExtractor):
+    large: bool = True
 
 @dataclass
-class JsonExtractor(Runner):
+class TxtExtractorSmall(TxtExtractor):
+    large: bool = False
+
+@dataclass
+class JsonExtractor(TxtExtractor):
     extension: str = "json"
 
     def run_single_instance(self, benchmark: str):
@@ -89,21 +70,57 @@ class JsonExtractor(Runner):
             for line in lines:
                 onedata = json.loads(line)
                 for pattern in onedata["patterns"]:
-                    regexes.append(pattern)
-        return "\n".join(getNeededRegexes(set(regexes)))
+                    regexes.append(pattern.encode("ascii", "ignore").decode("ascii"))
+        return "\n".join(getNeededRegexes(set(regexes), large=self.large))
 
+@dataclass
+class JsonExtractorLarge(JsonExtractor):
+    large: bool = True
+
+@dataclass
+class JsonExtractorSmall(JsonExtractor):
+    large: bool = False
 
 dirname = os.path.dirname(__file__)
-argparser = ScriptArgParser()
-argparser.parse_args()
-extract_dir = os.path.join(dirname, f"../extracted", argparser.subdirname)
-os.makedirs(extract_dir, exist_ok=True)
-outfile = os.path.join(extract_dir, f"{argparser.loop_count}_regexes.txt")
+# parse argument
+argparser = argparse.ArgumentParser(
+    prog=__file__,
+    description="Extract benchmark of specific types from the log file. The types is a list and can be unknown, timeout or error",
+)
+argparser.add_argument(
+    "--format",
+    help="format of the regex benchmarks",
+    metavar="json|txt",
+    choices=["txt", "json"],
+)
 
-if argparser.format == "txt":
-    TxtExtractor(argparser.bench, outfile).run()
-elif argparser.format == "json":
-    JsonExtractor(argparser.bench, outfile).run()
+argparser.add_argument(
+    "--subdirname",
+    default="",
+    help="name of the subdirectory where the regexes will be stored",
+    metavar="string",
+)
+
+# argparser.add_argument(
+#     "--loop-count",
+#     help="the sum of the loop counts should satisfy this condition",
+#     default="all",
+#     metavar="large|small|all",
+#     choices=["large", "small", "all"],
+# )
+argparser.add_argument("bench")
+
+args = argparser.parse_args()
+
+extract_dir = os.path.join(dirname, f"../extracted", args.subdirname)
+os.makedirs(extract_dir, exist_ok=True)
+
+if args.format == "txt":
+    TxtExtractorLarge(args.bench, 1, extract_dir).run()
+    TxtExtractorSmall(args.bench, 1, extract_dir).run()
+elif args.format == "json":
+    JsonExtractorLarge(args.bench, 1, extract_dir).run()
+    JsonExtractorSmall(args.bench, 1, extract_dir).run()
 else:
     print("Error: no format specified. Use --format to specify the format of the regex benchmarks")
     sys.exit(1)

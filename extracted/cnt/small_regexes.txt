@@ -1,0 +1,775 @@
+\D{0,2}[0]{0,3}[1]{0,1}\D{0,2}([2-9])(\d{2})\D{0,2}(\d{3})\D{0,2}(\d{3})\D{0,2}(\d{1})\D{0,2}
+(02\d\s?\d{4}\s?\d{4})|((01|05)\d{2}\s?\d{3}\s?\d{4})|((01|05)\d{3}\s?\d{5,6})|((01|05)\d{4}\s?\d{4,5})
+((\+44\s?\(0\)\s?\d{2,4})|(\+44\s?(01|02|03|07|08)\d{2,3})|(\+44\s?(1|2|3|7|8)\d{2,3})|(\(\+44\)\s?\d{3,4})|(\(\d{5}\))|((01|02|03|07|08)\d{2,3})|(\d{5}))(\s|-|.)(((\d{3,4})(\s|-)(\d{3,4}))|((\d{6,7})))
+http://\\.?video\\.google+\\.\\w{2,3}/videoplay\\?docid=[\\w-]{19}
+[a-zA-Z0-9][a-zA-Z0-9_]{2,29}
+([A-Za-z]{0,}[\.\,\s]{0,}[A-Za-z]{1,}[\.\s]{1,}[0-9]{1,2}[\,\s]{0,}[0-9]{4})| ([0-9]{0,4}[-,\s]{0,}[A-Za-z]{3,9}[-,\s]{0,}[0-9]{1,2}[-,\s]{0,}[A-Za-z]{0,8})| ([0-9]{1,4}[\/\.\-][0-9]{1,4}[\/\.\-][0-9]{1,4})
+Tom.{10,25}river|river.{10,25}Tom
+^.*[lL][iI][sS][tT][^\x0a]{50}
+^\n*[uU][sS][eE][rR][^\x0a]{49}
+^\n*[pP][aA][sS][sS][\x20\x09\x0b][^\n]{50}
+^.*[xX][tT][nN][dD][^\x0a]{50}
+^.*\x0a\x55\x73\x65\x72\x2d\x41\x67\x65\x6e\x74\x3a\x20.{5,30}MSIE\x20[1-9]*.
+^.*Content-Type:[^\x0A]{50}
+^\n*[aA][uU][tT][hH][\x20\x09\x0b][^\n]{50}
+^.*[pP][aA][sS][sS][^\x0a]{50}
+^.{24}.{0,17}\x4e\x41\x4d\x45\x4e\x41\x4d\x45
+^.*[aA][uU][tT][hH][^\x0a]{50}
+^.*\x0a\x55\x73\x65\x72\x2d\x41\x67\x65\x6e\x74\x3a.{3,50}\x4f\x70\x65\x72\x61\x2f.*
+^.{0,24}ISSPNGRQ
+^\n*[xX][tT][nN][dD][\x20\x09\x0b][^\n]{50}
+^.{0,24}\x49\x53\x53\x50\x4e\x47\x52\x51
+^.*[uU][sS][eE][rR][^\x0a]{50}
+^\n*[uU][sS][eE][rR][\x20\x09\x0b][^\n]{49}
+^.{24}.{0,17}NAMENAME
+^\n*[uU][sS][eE][rR][\x20\x09\x0b][^\n]{50,}
+\s{23}DIMBUS\s+Server\s+v\d+\x2E\d+
+^[^\x3e\x3f\x26]{50}
+cache_lastpostdate\[[^\]]+\]=[^\x00\x3B\x3D]{30}
+S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-512 
+User-Agent\x3a \{[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}\}
+S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-500 
+S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-520 
+S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-519 
+S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-518 
+S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-1101 
+S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-556 
+.*[aA][uU][tT][hH][^\x20]{50}
+^AUTH\s[^\n]{50}
+\x20reate\s+(aggregate\s+)*function\s+\S{50}
+.{0,24}\x20\x20\x20\x20\x20\x20\x20\x20
+.*[uU][sS][eE][rR][^\x20]{50}
+.*[xX][tT][nN][dD][^\x20]{50}
+.{0}\x20.{1}\x20.{21}\x20
+^CON\w{1,10}\d+\x20[^\r\n]{1,20}\x20
+.{31}.*[xX]\x20[pP]\x20_\x20[sS]\x20[hH]\x20[oO]\x20[wW]\x20[cC]\x20[oO]\x20[lL]\x20[vV]\x20
+.*\x20.{33}.*\x20.*.{0}.*\x20
+.*[pP][aA][sS][sS][^\x20]{50}
+^PASS\s[^\n]{50}
+\d\d\.[^\s\n\r]{40}
+^[^\n]*[\x20-t].*\nAccept-Language\x20\s*[\S]{32}
+^PASS\s[^\n]{49}
+.{31}.*[xX]\x20[pP]\x20_\x20[sS]\x20[pP]\x20[rR]\x20[iI]\x20[nN]\x20[tT]\x20[fF]\x20
+.*[lL][iI][sS][tT][^\x20]{50}
+.{31}[sS]\x20[pP]\x20_\x20[aA]\x20[dD]\x20[dD]\x20[uU]\x20[sS]\x20[eE]\x20[rR]\x20
+.{31}.*[xX]\x20[pP]\x20_\x20[pP]\x20[rR]\x20[oO]\x20[xX]\x20[iI]\x20[eE]\x20[dD]\x20[mM]\x20[eE]\x20[tT]\x20[aA]\x20[dD]\x20[aA]\x20[tT]\x20[aA]\x20
+.*Content-Type:[^\x0A]{50}
+.{31}[sS]\x20[pP]\x20_\x20[sS]\x20[tT]\x20[aA]\x20[rR]\x20[tT]\x20_\x20[jJ]\x20[oO]\x20[bB]\x20
+.{31}.*[xX]\x20[pP]\x20_\x20[sS]\x20[eE]\x20[tT]\x20[sS]\x20[qQ]\x20[lL]\x20[sS]\x20[eE]\x20[cC]\x20[uU]\x20[rR]\x20[iI]\x20[tT]\x20[yY]\x20
+(\d{4,4}-\d{2,2}-\d{2,2}).*(\d{2,2}:\d{2,2}):\d{2,2}.*(\d{4,4}-\d{2,2}-\d{2,2}).*(\d{2,2}:\d{2,2}):\d{2,2}
+/nifi-api/provenance/[a-f0-9\-]{36}
+^skit1 \([0-9a-f]{40}\) \[TAG=v1\] \(Locally Modified\)$
+^([0-9a-f]{32})$
+^/([^/]+/[^/]+)/([0-9a-fA-F]{40})(/.*)?$
+^urn:btih:(.{40})
+\}\)[\n\r]* {6}.state\('test', {[\n\r]* {8}url: '\/test',[\n\r]* {8}templateUrl: 'home\/test.tpl.html',[\n\r]* {8}controller: 'TestCtrl'[\n\r]* {6}\}\)
+^ ([^/]+) / (\d+) / (-?\d+) / ([^/]*) / ([a-fA-F0-9]{32}) (?: / (sh\.\d+\.\d+))? $
+^ACK ([0-9a-f]{40})$
+^[a-z0-9]{5,40}$
+^multipart\/form-data boundary=--------------------------\d{24}$
+^skit1 \([0-9a-f]{40}\) \[BRANCH=branch1\] \(Locally Modified\)$
+http://jp\.youtube\.com/get_video\?video_id=ATHC8qDkoO0&t=[-_a-z0-9A-Z]{32}
+connection to node .{36} at host0:9999 in data center dc closed
+\}\)[\n\r]* {6}.when\('\/test', {[\n\r]* {8}templateUrl: 'home\/test.tpl.html',[\n\r]* {8}controller: 'TestCtrl'[\n\r]* {6}\}\)
+(.*)\.([a-f0-9]{32})\.(.*)
+^<Buffer (?:78 ){50}\.\.\. >$
+^(.{5})\s([0-9#]{2})\s([A-Z#]{2})\s(L)\s(.{30})\s([YN])\s([YN])\s([YNCT])\s([YN])\s([YN])\s([YN])\s([YN])\s([YN])\s([YN])\s([0-9]{2})\s([YNC])\s([AOC])
+href='//cdn-[0|1].example.org/assets/a.[a-f0-9]{32}.css'
+^(job|analysis)-[0-9A-Za-z]{24}:[a-zA-Z_][0-9a-zA-Z_]*$
+^otpauth://hotp/\?secret=\w{32}&counter=0$
+(.*)/objects/pack/pack-[0-9a-f]{40}\.pack$
+^gpg:\s+using subkey ([a-f0-9]{16,40}) instead of primary key ([a-f0-9]{16,40})$
+^Digest realm=Users, domain=\/admin \/private, nonce=\w{32}$
+^((file|folder)\.[0-9a-f]{16}\.[0-9A-F]{16}!\d+|folder\.[0-9a-f]{16})$
+^[a-zA-Z][-a-zA-Z0-9]{1,49}$
+^(0x|0X)?[A-F0-9]{40}$
+^[ <\[]{0,2}TOWN[ >\]]{0,2}[ _-]{0,3}[ <\[]{0,2}www\.town\.ag[ >\]]{0,2}[ _-]{0,3}[ <\[]{0,2}partner of www.ssl-news\.info[ >\]]{0,2}[ _-]{0,3}\[\d+\/\d+\][ _-]{0,3}(|#34)(.+)\.(par|vol|rar|nfo).*(|#34).+yEnc$
+resourceID:([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})
+[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[8,9,a,b][0-9a-f]{3}-[0-9a-f]{12}
+http[s]?://.+/(?:[V|v]\d+|[V|v]\d+\.\d+)/([a-z|A-Z|0-9]{32})(?:/|$)
+^(?:[a-z]{2}_)?[A-z0-9]{32}$
+.\w{40} ([^()]+)($| \(.*\)$)
+ ?<[ \/]?[a-z0-9]{1,8}[a-z0-9= ]{2,20}[ \/]?> ?
+/nifi-api/flowfile-queues/[a-f0-9\-]{36}/listing-requests/[a-f0-9\-]{36}
+\/static\/res\/[a-z\d]{32}\.
+^(HTTP|http(s)?:\/\/(www\.)?[A-Za-z0-9]+([\-\.]{1,2}[A-Za-z0-9]+)*\.[A-Za-z]{2,40}(:[0-9]{1,40})?(\/.*)?)$
+^(\{{0,1}([0-9a-fA-F]){8}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){12}\}{0,1})$
+([0-7]{6}) [^ ]+ [0-9a-f]{40}\t(.*)
+^I should get the organization with id ([a-f0-9]{24})$
+([a-zA-Z0-9._-]{1,30}@[a-zA-Z0-9._-]{2,15}\.[a-zA-Z0-9._-]{2,15})
+(?m)^Change-Id: (I[0-9a-fA-F]{40})\n?
+/nifi-api/processors/[a-f0-9\-]{36}
+\A[a-zA-Z0-9][a-zA-Z0-9\-\\_\.]{2,34}[a-zA-Z0-9]\z
+/hello\n.{40}
+^rename-command SHUTDOWN [a-zA-Z0-9]{40}$
+^(cacheline_[a-fA-F0-9]{1,50}|cl_[a-fA-F0-9]{1,50})$
+^\d+(\.\d+)?\.\.\d+(\.\d+)?$|^\d{4}\/\d{2}\/\d{2}@\d{2}:\d{2}:\d{2}\.\.\d{4}\/\d{2}\/\d{2}@\d{2}:\d{2}:\d{2}$
+sweet_assets_([\w\d]{32}).css
+^(\d{1,9})\.(\d{1,9})(?:\.|-([a-z]+))(\d{1,9})(\.\d{1,9})?$
+(?:board=\d+)?((?:topic|threadid)=[\dmsg#\.\/]{1,40}(?:start=[\dmsg#\.\/]{1,40})?|action=profileu=\d+)
+^otpauth://totp/Example\:roberto@heapsource\.com\?secret=\w{32}&issuer=Example$
+^Digest realm=Users, nonce=\w{32}, opaque=abcdefg1234$
+/nifi-api/flow/processors/[a-f0-9\-]{36}/status
+^(6011|65\d{2}|64[4-9]\d)\d{12}|(62\d{14})$
+\.(part\d+|r\d+|rar|0+|0*10?|zipr\d{2,3}|zipx?)(\s*\.rar)*($|[ )\]-])|[a-f0-9]{32}\.[1-9]\d{1,2}.*\(\d+\/\d{2,}\)$
+^\d{4}[\- ]?\d{4}[\- ]?\d{4}[\- ]?\d{4}$|^\d{4}[\- ]?\d{6}[\- ]?\d{5}$
+(\d{6})((?:C|D)R?)([0-9,]{15})(N\d{3}|NMSC)([0-9P ]{16})
+\[.*\]|Y{2,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS
+^\s*(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(\/\d{1,2}|-\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?)(\s+(.*)|)$
+<script src='\/js\/hi.[a-f0-9]{32}.js'><\/script>
+^((https?|ftp):\/\/)(www\.)?\S{0,30}\.\S+$
+\A(?:[-]{50}|Content-Type:[ ]*message/rfc822)
+(?:^|msid=)([0-9]{21}\.[0-9a-f]{21})(?:$|&)
+powershell -executionpolicy bypass -file C:/Windows/Temp/packer-elevated-shell-[a-z0-9A-Z]{8}-[a-z0-9A-Z]{4}-[a-z0-9A-Z]{4}-[a-z0-9A-Z]{4}-[a-z0-9A-Z]{12}\.ps1
+^(.*)-(\d+)-g([a-fA-F0-9]{7,40})(-dirty)?$
+^\w{3},\s(\d{2})\s(\w{3})\s(\d{2,4})\s(\d{1,2}):(\d{2}):(\d{2})\s.{1,21}$
+\$stateProvider[\n\r]* {6}.state\('test', {[\n\r]* {8}url: '\/test',[\n\r]* {8}templateUrl: 'home\/test.tpl.html',[\n\r]* {8}controller: 'TestCtrl'[\n\r]* {6}\}\)
+dogrulama=[a-z0-9]{40}
+ember-([0-9a-f]{4,40})
+\AGB([0-9]{9}|[0-9]{12}|(HA|GD)[0-9]{3})\Z
+^[A-Z0-9_]{1,30}$
+([0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{1,2}:[0-9]{2}:[0-9]{2}(\.[0-9]{3})? [+\-]?[0-9]{1,2}:[0-9]{2}(\.[0-9]{3})?)[:\-\s]+
+\S{50}
+^\s*(\d{1,14})\s*(\d{1,14})\s*(\d{1,14})\s*(\d{1,14})\s*(\d{1,14})\s*$
+^(\d{6})(\d{4})?(C|D|RC|RD)\D?(\d{1,12},\d{0,2})((?:N|F).{3})(NONREF|.{0,16})(?:$|\/\/)(.*)
+(^4\d{12}$)|(^4[0-8]\d{14}$)|(^(49)[^013]\d{13}$)|(^(49030)[0-1]\d{10}$)|(^(49033)[0-4]\d{10}$)|(^(49110)[^12]\d{10}$)|(^(49117)[0-3]\d{10}$)|(^(49118)[^0-2]\d{10}$)|(^(493)[^6]\d{12}$)
+/nifi-api/processors/[a-f0-9\-]{36}/diagnostics
+\d{17}_foo_\d{14}_00000.warc.open
+^Merge\s\w{40}\sinto\s\w{40}$
+^\w{9}-\w{9}-\w{9}-\w{9}-\w{9}$
+([a-f0-9]{3})\/([a-f0-9]{29})\/(.*)\.([^\.]+)
+^(?:When )?I request a section with id ([a-f0-9]{24}) for that school$
+guid: [a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}
+^https?:\/\/sketchfab\.com\/models\/[a-z0-9]{32}
+(previous [0-9a-f]{40})|boundary
+(.{40}[a-z0-9A-Z]*).+$
+0x(?i:[0-9a-f]{40})
+part\-[0-9a-f]{8}\-[0-9a-f]{4}\-[0-9a-f]{4}\-[0-9a-f]{4}\-[0-9a-f]{12}\@response\.info
+(.*)/objects/pack/pack-[0-9a-f]{40}\.idx$
+.state 'test.test',[\n\r]* {8}url: '\/test'[\n\r]* {8}templateUrl: 'home\/test.tpl.html'[\n\r]* {8}controller: 'TestCtrl'[\n\r]
+(\w{32})
+.state 'test',[\n\r]* {8}url: '\/test'[\n\r]* {8}templateUrl: 'home\/test.tpl.html'[\n\r]* {8}controller: 'TestCtrl'[\n\r]
+^(?:When )?I request a course with id ([a-f0-9]{24}) for that school$
+/(.*)/(objects/pack/pack-[0-9a-f]{40}\.pack)$
+api\/smrt\/reports\/(\d{13})\/(\d{13})\/statements
+(\[|\()((\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}(\.\d+)?(\+|\-)\d{2})|infinity),((\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}(\.\d+)?(\+|\-)\d{2})|infinity)(\]|\))
+^[0-9a-f]{1,40}$
+^rename-command CONFIG [a-zA-Z0-9]{40}$
+([A-HJ-Z])(?:\s*((?:\d{1}\s*\d{1})|(?:\d{2}\s*\d{2})|(?:\d{3}\s*\d{3})|(?:\d{4}\s*\d{4})|(?:\d{5}\s*\d{5})))?
+(?i)^[a-zA-Z][a-zA-Z-]{1,30}[a-zA-Z]$
+^&(?:#x[a-f0-9]{1,8}|#[0-9]{1,8}|[a-z][a-z0-9]{1,31})
+\[color=(?:#[\da-fA-F]{3}|#[\da-fA-F]{6}|[A-Za-z]{1,20}|rgb\(\d{1,3}, ?\d{1,3}, ?\d{1,3}\))\]\s*\[/color\]
+/nifi-api/process-groups/(?:(?:root)|(?:[a-f0-9\-]{36}))/input-ports
+^Digest realm=Users, nonce=\w{32}, qop=auth,auth-int$
+(:[a-z0-9A-Z-]{1,50}:)
+^3.{15}|(2131|1800).{11}$
+^[a-z]{1,50}$
+(.*)\[\d+:(\d+):\d+\]\s+(.+)\s+\[.+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(:\d+){0,1}\s+\-\>\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(:\d+){0,1}
+(?:^|[,&?])\s*([a-z0-9]{50,}=*)(?:\W|$)
+(?:Domain )?(?:Expires|Expiration Date):\s+\w{3} (\w{3}) (\d{2}) (?:\d{2}:\d{2}:\d{2} \w{3}(?:[-+]\d{2}:\d{2})? )(\d{4})
+^tss~v1~*[a-zA-Z0-9\.\-\\_]{0,16}~[0-9]{1,3}~([a-zA-Z0-9\-\\_]+\={0,2})$
+^(\+49[ \.\-]?)?([\(]{1}[0-9]{1,6}[\)])?([0-9 \.\-\/]{3,20})((x|ext|extension)[ ]?[0-9]{1,4})?$
+http://asa\.tv/movie/D5/gcuppapa/[a-z0-9A-Z]{32}\.flv
+[A-Za-z0-9-_]{30,}
+cgisess_[0-9a-f]{32}
+:[a-z0-9A-Z_]{1,50}:
+^(org-[\-\.:_a-zA-Z0-9]{1,16}/)*org-[\-\.:_a-zA-Z0-9]{1,16}/ls-
+^[0-9a-zA-Z/+]*={0,2}([0-9a-f]{40})$
+[\d-]{10}T[\d:+]{14}
+<?([0-9A-Fa-f]{8})-?([0-9A-Fa-f]{4})-?([0-9A-Fa-f]{4})-?([0-9A-Fa-f]{4})-?([0-9A-Fa-f]{12})>?
+<script src='\/js\/hello.[a-f0-9]{32}.js'><\/script>
+^(\$NT\$)?[a-f0-9]{32}$
+^((?<prefix>.+)\/|)AWSLogs\/(?<account_id>[0-9]{12})\/elasticloadbalancing\/(?<region>.+)\/(?<logfile_date>[0-9]{4}\/[0-9]{2}\/[0-9]{2})\/[0-9]{12}_elasticloadbalancing_.+_(?<logfile_elb_name>[^_]+)_(?<elb_timestamp>[0-9]{8}T[0-9]{4}Z)_(?<elb_ip_address>.+)_(?<logfile_hash>.+)\.log(.gz)?$
+&(#[0-9]+|#[xX][0-9a-fA-F]+|[^\t\n\f <&#]{1,32})
+[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}.+
+^\d{1,4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,9})?(Z|[+-]\d{2}:\d{2})
+^skit1 \([0-9a-f]{40}\) \[TAG=v1\]$
+^420[0-9]{5}([0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{2})$
+^(?i:[a-z0-9.]{1,50})$
+compilation-[0-9a-f]{8}-[0-9a-f-]{27}
+([?&])PHPSESSID=([0-9a-zA-Z]{32})
+(20\d{6}[0-9a-f]{13})@ecouser.net/([0-9a-f]{8})
+^\d{13,14}|\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}$
+background-image: url\('..\/sprites.png\?[0-9a-f]{40}'\)
+^ ([^/]+) / (\d+) / (-?\d+) / (.*) / ([a-fA-F0-9]{32}) (?: / (sh\.\d+\.\d+))? $
+/nifi-api/flow/output-ports/[a-f0-9\-]{36}/status
+^[0-9a-f]{40} Braid: Update mirror 'skit1' to '[0-9a-f]{7}'$
+quiver-note-url/([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12})
+0\.\d+\.\d{14}\.[a-fA-F0-9]{7}
+^(\d{9})..<+(\d{6}).<+(\d{6}).<+.$
+uuid:(.{36})
+^(\$cisco4\$)?[a-z0-9\/.]{43}$
+([0-9a-fA-F]{40})\s+refs/(heads|tags)/(.*)
+var *_0x([a-f0-9]){4,6} *= *_0x([a-f0-9]){4,6}\['\w{5}'\]\(!_0x([a-f0-9]){4,6}, *!_0x([a-f0-9]){4,6}\)
+^ (\w{10})    # product ID\n          (\w)        # processing stage flag\n          (\w{3})     # originator ID\n          (\d{8}) _   # start_day\n          (\d{6}) _   # start_time\n          (\d{8})     # duration\n          (\w)        # phase id\n          (\d{3}) _   # cycle number within phase\n          (\d{5}) _   # relative orbit number within cycle\n          (\d{5}) _   # absolute orbit number\n          (\d{4})     # product file counter\n          \. (\w\w)   # satellite ID\n       
+^https?:\/\/.*[0-9a-f]{40}
+^(?:When )?I request an org with id ([a-f0-9]{24})$
+^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})\d{0,4}([+-]{1}\d{2}:\d{2}|Z)$
+ns=(\d*)g=([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})
+((\d{8,14})|(\d{3,4}-)?\d{7,8})|(13[0-9]{9})|(\d{2,4}-\d{2,4}-\d{2,4})
+^(&[a-z][a-z0-9]{1,31})
+DMM_TOKEN.*([a-z0-9]{32})
+^[a-z0-9.]{1,50}$
+connection to node .{36} at host0:9999 in data center dc closed unexpectedly: BORK
+/nifi-api/controller-services/node/[a-f0-9\-]{36}/references
+first-job\/[0-9a-f]{8}-[0-9a-f-]{27}
+/nifi-api/versions/process-groups/(?:(?:root)|(?:[a-f0-9\-]{36}))
+^[a-f0-9]{8}-?[a-f0-9]{4}-?4[a-f0-9]{3}-?[89ab][a-f0-9]{3}-?[a-f0-9]{12}\Z
+src='/images/email.[a-f0-9]{32}.png'
+[a-f0-9]{8}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{12}
+(\'|)[A-Za-z0-9\+]{40}(\'|)
+.*'skia_revision': '([0-9a-fA-F]{2,40})'.*
+^([A-Z0-9]{8,12}|[b-zB-Z0-9]{15}|NOQUEUE): (.+)$
+^I should get a course with id ([a-f0-9]{24})$
+[13][a-km-zA-HJ-NP-Z1-9]{25,34}
+[0-9a-f]{40} refs\/notes\/
+[0-9a-f]{8}\-?[0-9a-f]{4}\-?4[0-9a-f]{3}\-?[89ab][0-9a-f]{3}\-?[0-9a-f]{12}
+10\.1371/journal\.p[a-zA-Z]{3}\.[\d]{7}|10\.1371/annotation/[a-zA-Z0-9]{8}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{12}
+ \d{47}\.{3}$
+^skit1 \([0-9a-f]{40}\) \[BRANCH=branch1\]$
+^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*(([0-9]{1,2})\/(.*)\/([0-9]{4})):(([0-9]{2}):[0-9]{2}:[0-9]{2})\s*(.*)\]\s*([\w]*)\s(.*)\sHTTP\/(.*)\s([0-9]{3})\s(.*)\s*(.*)\s*(.*)
+(sites|spaces)\.[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\.json
+([0-9A-Za-z\-_]{1,12}) \u0022b\u0022f #([0-9A-Za-z\-_\@]{8,10})
+/templates/[a-f0-9\-]{36}/download
+^\.breakfast-manifest-[0-9a-f]{32}.json$
+^(?:When )?I request a student with id ([a-f0-9]{24}) for that org$
+[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}\.[a-z]+
+^XE[0-9]{2}(ETH[0-9A-Z]{13}|[0-9A-Z]{30,31})$
+\/.{1,32}\/.{3}
+^magnet:\?xt=urn:[a-z0-9]+:[a-z0-9]{32,40}&dn=.+&tr=.+$
+^(\d+)-g([a-fA-F0-9]{7,40})(-dirty)?$
+/nifi-api/flow/process-groups/(?:(?:root)|(?:[a-f0-9\-]{36}))/controller-services
+^[\w]{32}:[\w]{32}$
+^(\d{1,4}[ \.\/\-][A-Z]{3,9}([ \.\/\-]\d{1,4})?|[A-Z]{3,9}[ \.\/\-]\d{1,4}([ \.\/\-]\d{1,4})?|\d{1,4}[ \.\/\-]\d{1,4}([ \.\/\-]\d{1,4})?)( \d{1,2}:\d{1,2}(:\d{1,2})?)?$
+^(?:When )?I request a course with id ([a-f0-9]{24}) for an org with id ([a-f0-9]{24})$
+^[a-z0-9]{6,}[-_a-z0-9]{12,}[a-z0-9]{6,}\s*\z
+^(\d{2}-\w{3}-\d{4}\s+\d{2}:\d{2}:\d{2}\.\d{3})\s+client\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})#\d+\s+\(.+\):\s+query:\s+(.*)\s+IN\s+(\w+)\s+\+\w*\s+\((\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)$
+^(?:When )?I request students for an organization with id ([a-f0-9]{24})$
+^(?:When )?I request students for an org with id ([a-f0-9]{24}) and a school with id ([a-f0-9]{24})$
+^\n            (?:[a-f0-9]{8}) -\n            (?:[a-f0-9]{4}) -\n            (?:[a-f0-9]{4}) -\n            (?:[a-f0-9]{4}) -\n            (?:[a-f0-9]{12})\n        $
+__cfduid=([a-f0-9]{46})
+^(http|https)://steamcommunity.com/openid/id/[0-9]{15,25}$
+foobar/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}
+^(revert: )?(feat|fix|polish|docs|style|refactor|perf|test|workflow|ci|chore|types|build|merge)(\(.+\))?: .{1,50}
+([a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12})
+^:61:(\d{6})(C|D)(\d+),(\d{0,2})\w{4}\w{1}(\d{9}|NONREF|EREF)(.*)$
+^filesystem:chrome-extension:\/\/[a-p]{32}\/external\/
+^[A-z\d]{50}$
+/nifi-api/remote-process-groups/[a-f0-9\-]{36}/run-status
+^hsl\(\s{0,31}[\-\.]?\d+\s{0,31},\s{0,31}\.?\d+%\s{0,31},\s{0,31}\.?\d+%\s{0,31}\)|hsla\(\s{0,31}[\-\.]?\d+\s{0,31},\s{0,31}\.?\d+%\s{0,31},\s{0,31}\.?\d+%\s{0,31},\s{0,31}\.?\d+\s{0,31}\)$
+tree ([a-z0-9]{40})
+^[a-zA-Z0-9]([-._a-zA-Z0-9]{0,48}[a-zA-Z0-9])?$
+^refs\/heads\/([^ ]+) ([0-9a-f]{40})$
+([A-Z]{2,3}\,\ [0-9]{1,2}\ [A-Z]{2,3}\ [0-9]{4}\ [0-9]{1,2}\:[0-9]{1,2}\:[0-9]{1,2}\ [\-|\+][0-9]{4}\ \(.*)\)+$
+^(?:When )?I request a student with id ([a-f0-9]{24}) for an org with id ([a-f0-9]{24})$
+^([a-zA-Z0-9\-]{38})$
+^.{8}(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2}).(.{15})([NS])(\d{8})([EW])(\d{9})(\d{8})
+(?:CVSS:3\.0/)?[A-Za-z:/]{26,}
+(Queued up.*id:(.{24}))
+&[0-9a-z]{2,8}|&#[0-9]{1,7}|[0-9a-f]{1,6}
+^([A-Za-z]\d{7}|\s{8}) ([A-Za-z]\d{7}|\s{8}) ([0-9a-fA-F]{8}|\s{8}) ([0-9a-fA-F]{8})
+^(.+)-([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})
+^Digest realm=Users, nonce=\w{32}$
+/nifi-api/connections/[a-f0-9\-]{36}
+\A(-?)(0|[1-9][0-9]{0,38})\z
+\Aobjects/[0-9a-f]{2}/[0-9a-f]{38}\z
+\}\)[\n\r]* {6}.state\('test.test', {[\n\r]* {8}url: '\/test',[\n\r]* {8}templateUrl: 'home\/test.tpl.html',[\n\r]* {8}controller: 'TestCtrl'[\n\r]* {6}\}\)
+^([a-zA-Z_][a-zA-Z0-9_-]*) ([a-zA-Z0-9][a-zA-Z0-9.-]*) *([0-9T:+-]{24,24}) *(.*)
+\n          \[EvilEvents:EventProcessed\(overwatch_released\)\]:\s\n          EVENT_ID:\s[a-z0-9]{8}\-[a-z0-9]{4}\-[a-z0-9]{4}\-[a-z0-9]{4}\-[a-z0-9]{12}\s::\s\n          STATUS:\ssuccessful\s::\s\n          SUBSCRIBER:\s
+^(0x)?[0-9A-F]{40}$
+(^(\d{3,4}-)?\d{7,8})$|(13[0-9]{9})
+^Digest realm=Administrators, nonce=\w{32}$
+@media.*(min|max)-width:([ ]+)?(([0-9]{1,5})(\.[0-9]{1,20}|)(px|em))
+0x[0-9a-zA-Z]{40}
+^(?<name>.{8}) (?<id>.{8}) (?<owner>.{8}) (?<status>(INPUT|ACTIVE|OUTPUT)) (?<class>.{1,8})( (?<rest>.*))?$
+^(.{5})\s([0-9#]{2})\s([YN])\s([YN])\s([YN])\s([YN])\s([YN])\s([YN])\s([YN])\s([YN])\s([CF])\s([+A])\s([DMY\s])\s([0-9]{8})\s([0-9]{10})\s([YN])\s([YN])\s([YN])\s([0-9]{2})\s([YN])\s([YN])\s([YN])\s([YN])$
+([\/\@])(\d{6})(.)([\d\.\s]{7})([NSns])(.)([\d\.\s]{8})([EWew])(.)(.*)$
+x-signature.*\n.*\w{32}
+(.+)\s.+\s-\s\[(.+)\]\s(GET|POST|PUT|HEAD|OPTIONS|DELETE).+HTTP/1\.[0-1]\s[0-9]{3}\s([0-9]{1,20})\s.+
+(quicklatex.com-[a-f0-9]{32}_l3.)(png)
+sweet_assets_([\w\d]{32}).js
+http:\/\/api.tropo.com\/v1\/applications\/\d{1,7}\/addresses\/number\/\d{1,20}
+[^\s<>&]{32,}
+^(cacheline_[a-zA-Z0-9]{1,50}|cl_[a-zA-Z0-9]{1,50})$
+([0-9a-fA-F]{40}) ([0-9a-fA-F]{40}) refs\/(heads|tags)\/(.*)( |00|\u0000)|^(0000)$
+/nifi-api/process-groups/(?:(?:root)|(?:[a-f0-9\-]{36}))/variable-registry
+fatal: (Path '([^']+)' does not exist in '([0-9a-f]{40})'|ambiguous argument '([^']+)': unknown revision or path not in the working tree.)
+.*/(objects/[0-9a-f]{2}/[0-9a-f]{38})$
+.{8}-.{4}-.{4}-.{12}-id
+^[A-Za-z][A-Za-z0-9\.\-_]{1,50}$
+^/internal/task/([a-zA-Z0-9_-]{22})/runs/([0-9]+)/put-artifact/(.*)$
+^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|0{8}-0{4}-0{4}-0{4}-0{12})$
+^\s*Change-Id: *I[a-f0-9]{40}$
+^([\+][0-9]{1,3}[ \.\-])?([\(]{1}[0-9]{2,6}[\)])?([0-9 \.\-\/]{3,20})((x|ext|extension)[ ]?[0-9]{1,4})?$
+^(\d{2}-\w{3}-\d{4}\s+\d{2}:\d{2}:\d{2}\.\d{3})\s+client\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})#\d+:\s+query:\s+(.*)\s+IN\s+(\w+)\s+\+\s+\((\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)$
+<img.*src=[']:\/([a-zA-Z0-9]{32})[']
+(?:https?:\/\/)?(?:[\w\-]+\.)*(?:drive|docs)\.google\.com\/(?:(?:folderview|open|uc)\?(?:[\w\-\%]+=[\w\-\%]*&)*id=|(?:folder|file|document|presentation)\/d\/|spreadsheet\/ccc\?(?:[\w\-\%]+=[\w\-\%]*&)*key=)([\w\-]{28,})
+link rel='stylesheet' href='/subpath/css/application.[a-f0-9]{32}.css' media='screen'
+style-src 'nonce-.{48}'
+^([0-9a-f]{40,})\s+refs/changes/[0-9a-f]{2}/([0-9]+)/(.+)$
+/nifi-api/output-ports/[a-f0-9\-]{36}/run-status
+/nifi-api/process-groups/(?:(?:root)|(?:[a-f0-9\-]{36}))/controller-services
+Segment UID: 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2})
+var *_0x([a-f0-9]){4,6} *= *function *\(_0x([a-f0-9]){4,6}, *_0x([a-f0-9]){4,6}, *_0x([a-f0-9]){4,6}\) *{
+^[a-z0-9][a-z0-9-]+[a-z0-9]--[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$
+(?mi)^[a-z][a-z\-]{0,38}$
+^\d{1,30}\.\d{1,30}\.\d{1,30}
+^(\$wbb3\$\*1\*)?[a-f0-9]{40}[:*][a-f0-9]{40}$
+.*The zone with id '[0-9a-zA-Z-]{36}' was not found.*
+%?([0-9]{1})([0-9]{1})([A-Z0-9 ]{11})([A-Z0-9 ]{2})([A-Z0-9 ]{10})([A-Z0-9 ]{4})([1-2]{1})([0-9]{3})([0-9]{3})([A-Z ]{3})([A-Z ]{3})(.*)\?
+(?:\d{11}-)\d{2}-[a-zA-Z_0-9]{4}-\d{1,8}
+[A-Z]+ [0-9A-Za-z/\s]{2,45} - [A-Z][a-z]+ 20[0-9]{2}.*
+^1{11}|2{11}|3{11}|4{11}|5{11}|6{11}|7{11}|8{11}|9{11}|0{11}$
+open\.spotify\.com\/(?:track|artist|user\/\w+\/playlist)\/[a-zA-Z-0-9]{22}
+d_array_example\/[0-9a-f]{24}\/edit
+foobar\/[0-9a-f-]{36} \(0\) \(canary\)
+([A-Za-z0-9_]{1,25})$
+Connection to node .{36} at .+:\d+ in data center .+ closed
+^\.sprockets-manifest-[0-9a-f]{32}.json$
+([a-zA-Z]{1,8})(-([a-zA-Z|-]{1,8}))?(\s*\s*q\s*=\s*(1\.0{0,3}|0\.\d{0,3}))?\s*(,|$)
+btih:([a-f0-9]{40})
+http://cdn\w*\.yourfilehost\.com/thumbs/\d+/[a-z0-9A-Z]{32}\.jpg
+^(revert: )?(feat|fix|docs|style|refactor|perf|test|workflow|ci|chore|build)(\(.+\))?: .{1,50}
+^\s*(...)\s*(\d{1,14})\s*(\d{1,14})\s*(\d{1,14})\s*(\d{1,14})\s*$
+`name` = (:[0-9a-z]{32})
+^((\(\d{2,3}\))|(\d{3}\-))?(\(0\d{2,3}\)|0\d{2,3}-)?[1-9]\d{6,7}(\-\d{1,4})?$
+7[0-9]{15,25}
+-[0-9a-f]{32}.css$
+/nifi-api/tenants/user-groups/[a-f0-9\-]{36}
+^[0-9a-zA-Z_-]{1,50}$
+\Aobjects/pack/pack-[0-9a-f]{40}\.pack\z
+/world\n.{40}
+^(?:When )?I request the current term for an org with id ([a-f0-9]{24}) and a school with id ([a-f0-9]{24})$
+^([0-9]+) (.+) ([0-9a-fA-F]{40})(\s+[0-9]+|\s+-)?\t(.+)$
+Chapter ?[sS]egment ?UID: length 16, data: 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2}) 0x([0-9a-f]{2})
+T([A-z0-9]){8}\/B([A-z0-9]){8}\/([A-z0-9]){24}\/?$
+/nifi-api/reporting-tasks/[a-f0-9\-]{36}
+^[0-9a-zA-Z]([-0-9a-zA-Z]{0,48}[0-9a-zA-Z])?$
+(?s)BBX\.context\.assets\['[0-9a-f]{32}'\]\.push\(({.+})\)
+\S{8}-\S{4}-\S{4}-\S{4}-\S{12}
+^I should get a student with id ([a-f0-9]{24})$
+job-[A-Za-z0-9]{24}
+\*{27} \d\. row \*{27}
+^(\d{3}\.\d{3}\.\d{3}\.\d{3})$|^(\d{12})$|^(P-\d{8}\.\d{1}\/\d{3})$
+\}\)[\n\r]* {6}.state\('test', {[\n\r]* {8}url: '\/test',[\n\r]* {8}templateUrl: 'home\/test.tpl.html'[\n\r]* {6}\}\)
+http://mobile\d+\.tube8\.com/flv/[a-z0-9A-Z]{32}/[a-z0-9A-Z]{8}/\d{4}/\d{2}/[a-z0-9A-Z]+/[a-z0-9A-Z]+\.3gp
+^[a-f-0-9]{32}:[a-f-0-9]{32}$
+/nifi-api/process-groups/(?:(?:root)|(?:[a-f0-9\-]{36}))/processors
+\A\$P\$([./0-9A-Za-z])([!-9-~]{8})\n\t\t\t\t([./0-9A-Za-z]{22})\z
+/nifi-api/controller-services/[a-f0-9\-]{36}/state
+<input type=hidden name=(\w{32}) value=(\w{32})>
+^(?:When )?I request a school with id ([a-f0-9]{24}) for that org$
+^(0x)?([0-9a-f]{40}|[0-9A-F]{40})$
+^When I request sections for an organization with id ([a-f0-9]{24})$
+^ *[0-9]+\) ([A-Z0-9]{40}) (.+)$
+^(?:When )?I request sections for an org with id ([a-f0-9]{24}) and a school with id ([a-f0-9]{24})$
+Updating instance foobar2: foobar2\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f-]{12} \(1\)
+dwa_batch_[\d\w]{8}-[\d\w]{4}-[\d\w]{4}-[\d\w]{4}-[\d\w]{12}
+^When I request teachers for an organization with id ([a-f0-9]{24})$
+/nifi-api/output-ports/[a-f0-9\-]{36}
+^dejitter=(\d{1,10})(CDB=(\d{1,10})BTM=(0|1|2))?(TD=(\d{1,10}))?(BFR=(0|1))?$
+([0-9a-f]{8})-*([0-9a-f]{4})-*(4[0-9a-f]{3})-*([89ab][0-9a-f]{3})-*([0-9a-f]{12})
+(?i)^[0-9a-f](?:[.][0-9a-f]){0,31}$
+^[-\w\u0430-\u044f\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u0105\u00e6\u00e7\u0107\u00e8\u00e9\u00ea\u00eb\u0119\u0153\u00ec\u00ed\u00ef\u00ee\u0142\u0144\u00f0\u00f2\u00f3\u00f4\u00f5\u00f6\u00f8\u015b\u00f9\u00fa\u00fb\u00f1\u00fc\u00fd\u00ff\u017c\u017a\u00df\u00de\u010f\u01110-9#~!$%^&*_=+\/`\|}{\'?]+(\.[-\w\u0430-\u044f\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u0105\u00e6\u00e7\u0107\u00e8\u00e9\u00ea\u00eb\u0119\u0153\u00ec\u00ed\u00ef\u00ee\u0142\u0144\u00f0\u00f2\u00f3\u00f4\u00f5\u00f6\u00f8\u015b\u00f9\u00fa\u00fb\u00f1\u00fc\u00fd\u00ff\u017c\u017a\u00df\u00de\u010f\u01110-9#~!$%^&*_=+\/`\|}{\'?]+)*@([\w\u0430-\u044f\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u0105\u00e6\u00e7\u0107\u00e8\u00e9\u00ea\u00eb\u0119\u0153\u00ec\u00ed\u00ef\u00ee\u0142\u0144\u00f0\u00f2\u00f3\u00f4\u00f5\u00f6\u00f8\u015b\u00f9\u00fa\u00fb\u00f1\u00fc\u00fd\u00ff\u017c\u017a\u00df\u00de\u010f\u01110-9_][-\w\u0430-\u044f\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u0105\u00e6\u00e7\u0107\u00e8\u00e9\u00ea\u00eb\u0119\u0153\u00ec\u00ed\u00ef\u00ee\u0142\u0144\u00f0\u00f2\u00f3\u00f4\u00f5\u00f6\u00f8\u015b\u00f9\u00fa\u00fb\u00f1\u00fc\u00fd\u00ff\u017c\u017a\u00df\u00de\u010f\u01110-9_]*(\.[-\w\u0430-\u044f\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u0105\u00e6\u00e7\u0107\u00e8\u00e9\u00ea\u00eb\u0119\u0153\u00ec\u00ed\u00ef\u00ee\u0142\u0144\u00f0\u00f2\u00f3\u00f4\u00f5\u00f6\u00f8\u015b\u00f9\u00fa\u00fb\u00f1\u00fc\u00fd\u00ff\u017c\u017a\u00df\u00de\u010f\u01110-9_]+)*([\w\u0430-\u044f\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u0105\u00e6\u00e7\u0107\u00e8\u00e9\u00ea\u00eb\u0119\u0153\u00ec\u00ed\u00ef\u00ee\u0142\u0144\u00f0\u00f2\u00f3\u00f4\u00f5\u00f6\u00f8\u015b\u00f9\u00fa\u00fb\u00f1\u00fc\u00fd\u00ff\u017c\u017a\u00df\u00de\u010f\u0111]+)|(\.[\w\u0430-\u044f\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u0105\u00e6\u00e7\u0107\u00e8\u00e9\u00ea\u00eb\u0119\u0153\u00ec\u00ed\u00ef\u00ee\u0142\u0144\u00f0\u00f2\u00f3\u00f4\u00f5\u00f6\u00f8\u015b\u00f9\u00fa\u00fb\u00f1\u00fc\u00fd\u00ff\u017c\u017a\u00df\u00de\u010f\u0111]{2,6})|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$
+(&amp|\?)sid=[0-9a-f]{32}&amp
+^skit1 \([0-9a-f]{40}\) \[BRANCH=master\] \(Remote Modified\)$
+^[0-9a-f]{40} Braid: Update mirror 'skit-layouts' to '[0-9a-f]{7}'$
+^/.*/tmp/golang/src/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+write-behind\.replica_mklhash [\d\w]{40}\r\n
+\/fake-backend\/employees\/.{36}$
+\$2a\$\d+\$(.{23})
+.*/(objects/pack/pack-[0-9a-f]{40}\.pack)$
+.{1,50}[\w\=]
+(([0-9]|[a-f]){32}-)*([0-9]|[a-f]){32}\.vurl\.
+^/task/([a-zA-Z0-9_-]{22})/artifacts/(.*)$
+^([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}|0)$
+(__.{38})
+^http.+([A-Z0-9]{13})_[0-9]{13}_([0-9]{13})
+^(.{30}) (.{20}) (.{20}) (.+)
+^skit1 \([0-9a-f]{40}\) \[BRANCH=master\] \(Locally Modified\)$
+(?:^|\D)([\d \-]{12,32})(?:$|\D)
+\A\$5\$rounds=1234\$salty\$[a-zA-Z0-9./]{43}\n\z
+^([0-9a-f]{40})\s+(.+)$
+\/([a-zA-Z0-9_-]{7,14})\/([a-zA-Z0-9_-]{7,14})\.(.{1,4})}
+([^\s]*[\/][0-9a-f]{32})([^\s]*)
+`name` IN \((:[0-9a-z]{32}),(:[0-9a-z]{32}),(:[0-9a-z]{32})\)
+^\w{6,9},\s(\d{2})-(\w{3})-(\d{2})\s(\d{2}):(\d{2}):(\d{2})\s.{3,20}$
+^/claim-work/([a-zA-Z0-9_-]{1,22})/([a-zA-Z0-9_-]{1,22})$
+^(?:(?:(?:00\s?|\+)44\s?|0)(?:1\d{8,9}|[23]\d{9}|7(?:[1345789]\d{8}|624\d{6})))$
+link rel='stylesheet' href='/css/application.[a-f0-9]{32}.css' media='screen'
+(plan)[_]([\w-]{22})
+^  (.{40,}) - (can be restored)$
+foo:.*(?:bar ){30,}
+link rel='stylesheet' href='/subpath/css/screen.[a-f0-9]{32}.css' media='screen'
+^\x20BitTorrent protocol.{48}$
+^(.*)(?:ASPSESSIONID[a-zA-Z]{8}=[a-zA-Z]{24})(?:&(.*))?$
+^/arvados/v1/collections/([0-9a-fA-F]{32}\+[0-9]+)+$
+(^[^.]+)(.\w{2}-\w{4,9}-\d)?.(elasticbeanstalk.com|eb.amazonaws.com.cn)$
+^(\$chap\$0\*)?[a-f0-9]{32}[\*:][a-f0-9]{32}(:[0-9]{2})?$
+\A((\d{1,2}[-\/]\d{1,2}[-\/]\d{4})|(\d{4}[-\/]\d{1,2}[-\/]\d{1,2})|(\d{1,2}-[A-Za-z]{3,4}-\d{4})|([A-Za-z]{3,4} +\d{1,2} \d{2,4}))\z
+^[A-Za-z0-9_/]{1,50}\.png$
+Updating instance foobar1: foobar1\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f-]{12} \(2\)
+\[%(\s*)(source|_bip|_client|\w*\.\w*|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})#[a-zA-Z0-9_\-#:.$@*[\],?()]*(\s*)%\]
+^\n        urn:                                # URN indicator\n        [A-Z0-9]                            # First caracter (must be alphanumeric)\n        [A-Z0-9-]{0,31}:                    # First word in URN (max of 32 caracters)\n        [-A-Z0-9()+,\.:=@\$_!*'%\/?#]+    # Rest of URN (almost any caracters)\n    $
+multipart\/form-data boundary=--------------------------\d{24}
+(\S{8}-\S{4}-\S{4}-\S{4}-\S{12})
+^id:([^ ]+) sub:(\d{1,3}) dlvrd:(\d{3}) submit date:(\d{10,12}) done date:(\d{10,12}) stat:([A-Z ]{7}) err:(\d{2,3}) text:(.*)$
+addr=([13][123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{25,33})
+0x[a-zA-Z0-9]{40}
+/nifi-api/reporting-tasks/[a-f0-9\-]{36}/run-status
+([0-9A-F]{4,6}) ([CFT]) ([0-9A-F]{4,6})(?: ([0-9A-F]{4,6}))?(?: ([0-9A-F]{4,6}))?
+^\{isa = PBXBuildFile fileRef = [A-Z0-9]{24}\}$
+powershell -executionpolicy bypass & { if \(Test-Path variable:global:ProgressPreference\){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'}\. c:/Windows/Temp/packer-ps-env-vars-[a-z0-9A-Z]{8}-[a-z0-9A-Z]{4}-[a-z0-9A-Z]{4}-[a-z0-9A-Z]{4}-[a-z0-9A-Z]{12}\.ps1 &'c:/Windows/Temp/inlineScript.ps1' exit \$LastExitCode }
+This reverts commit ([0-9a-f]{40})
+^(\+49[ \.\-])?([\(]{1}[0-9]{1,6}[\)])?([0-9 \.\-\/]{3,20})((x|ext|extension)[ ]?[0-9]{1,4})?$
+^chrome-extension[_|://]([a-z]{32})
+\n\n\*\*\*.+([a-z0-9]{32}).+\*\*\*$
+^([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})-([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})$
+\$([^?&$\']{1,40})\$
+^Apache-Session-([a-z0-9]{32})\.lock$
+href=.+/commit/([a-z0-9]{40})/>
+^\s*[^\r\n]{1,30}\s*$
+(0-[a-z]+-d[0-9]-[a-z0-9]{32})
+([0-9a-fA-F]{32})(?:\/(\d+))?(?:o=(\d+))?
+^\d{10,11}|\d{3}\.\d{3}\.\d{3}-\d{2}$
+Update web-platform-tests to revision [0-9a-f]{40}
+\$routeProvider[\n\r]* {6}.when '\/test',[\n\r]* {8}templateUrl: 'home\/test.tpl.html'[\n\r]* {8}controller: 'TestCtrl'[\n\r]* {8}controllerAs: 'test'[\n\r]
+pack-([0-9a-f]{40}).idx
+^\$2[aby]\$\d+\$.{50,}
+(.{50}).+
+[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}
+^ (.{30}) .* (.{30}) $
+Updating instance foobar1: foobar1\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f-]{12} \(0\)
+\A\$1\$([!-#%-9-~]{0,8})\$([./0-9A-Za-z]{22})\z
+.*[\t\n\r ]?(([0-9]{1,19})=([0-9]{4})([0-9]{3})(.*)\?).*
+NEED_PASSPHRASE (.{16}) (.{16}).*\n
+sha1: [a-z0-9]{40}\n
+^[0-9a-z]{3,24}$
+link rel='stylesheet' href='/css/screen.[a-f0-9]{32}.css' media='screen'
+^(\s{27,30}\s*|\t{5})(.*)$
+dummy-fastboot-\w{32}
+Victim: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})
+0\.\d{14}\.[a-fA-F0-9]{7}
+^[a-zA-Z0-9,\-]{22,40}$
+stdout:job=fake-errand-name index=0 id=.{36}\nnew-stdout\nadditional-stdout
+^\s*([^:\s][^:\n]{2,29})\s*:\s*\S
+\d+:[0-9a-fA-F]{32}
+^[a-z0-9]{32}/[a-z0-9]{32}$
+([&?])sid=[0-9a-f]{32}&
+^(\d+)\t(\d+)\t(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\t(..)
+^(.*)\,(.*)\,(.*\,.*)\,.*\,(.*)\,\,{31}
+Using [0-9a-f]{40} as shared key
+^RESULT PREPARED [0-9a-f]{32} \[\[ks, tbl, col, :varchar\]\]$
+^\$1\$.{0,8}\$[a-z0-9\/\.]{22}$
+(?i)(&|^)(?:jsessionid=[0-9a-z$]{10,}|sessionid=[0-9a-z]{16,}|phpsessid=[0-9a-z]{16,}|sid=[0-9a-z]{16,}|aspsessionid[a-z]{8}=[0-9a-z]{16,}|cfid=[0-9]+&cftoken=[0-9a-z-]+)(&|$)
+(([0-9a-f]{32}))
+^(([a-z]{2,3})(-([A-Z][a-z]{3}))?(-([A-Z]{2}|[0-9]{3}))?)((-([a-zA-Z0-9]{5,8}|[0-9][a-zA-Z0-9]{3}))*)$|^(root)$
+(^|Locomotive::)(Content)*Entry([0-9a-fA-F]{24})$
+\A\n                \s+ (\d+) \s+ ([A-Fa-f0-9]{40})\n            
+.sprockets-manifest-[a-f0-9]{32}.json
+^0x0100[a-f0-9]{48}$
+key_(live|test)_[A-Za-z0-9]{32}
+^https?:\/\/gyazo.com\/[a-z\d]{32}$
+^QS([NDR])(.{4})(.{6})(\d{8})(\d{8}| {8})([01]{7})([ SH])([ ABXG])(.{4})(.{6})(.{8})(.{8})(.)$
+^(\$django\$\*1\*)?pbkdf2_sha256\$[0-9]+\$[a-z0-9]+\$[a-z0-9\/+=]{44}$
+^([0-9a-f]{8})-?([0-9a-f]{4})-?([0-9a-f]{4})-?([0-9a-f]{4})-?([0-9a-f]{12})$
+s\.setAttribute\('value', '([a-f0-9]{40})'\);
+^(.*)(?:phpsessid=[0-9a-zA-Z]{32})(?:&(.*))?$
+^Digest realm=Users, domain=\/admin, nonce=\w{32}$
+^(\w+)-(\w+).([a-z0-9-]{36}|([a-z/+]+)$)
+(?:.+[-._])?([a-fA-F0-9]{40})(?:[-._].+)?\.torrent\.rtorrent
+\/media\/css\/[u|s]\.[a-f0-9]{32}\.[0-9]{10}\.css
+Name\s+: (.+)\s+LastWriteTime\s+: ([0-9]{14}[0-9:\+-]{0,6})\s+LastAccessTime\s+: ([0-9]{14}[0-9:\+-]{0,6})\s+CreationTime\s+: ([0-9]{14}[0-9:\+-]{0,6})\s+Mode\s+: ([adhsr-]+)\s+Length\s+: {0,1}([0-9]{0,})
+^QB([NDR])(.{12})(.{8})(.{8})(.{24})(.{24})$
+jsessionid=[0-9a-z]{32}$
+compilation-[0-9a-f]{8}-[0-9a-f-]{27}\/[0-9a-f]{8}-[0-9a-f-]{27}
+^:[0-9]{6} [0-9]{6} [0-9a-f]{40} [0-9a-f]{40} ([ACDMRTUX])[0-9]{0,3}\t(.+)$
+^UPDATEarm:0\d{13}10\nUPDATEarm:1\d{13}20\nUPDATEarm:2\d{13}30\nUPDATEarm:3\d{13}40\n$
+^otpauth://totp/roberto\?secret=\w{32}$
+\$stateProvider[\n\r]* {6}.state\('test', {[\n\r]* {8}url: '\/test',[\n\r]* {8}templateUrl: 'home\/test.tpl.html',[\n\r]* {8}controller: 'TestCtrl'[^$]*}\)
+^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),(\d+),(\d+),..,.*$
+^ip-address\s*(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) *(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})*
+^I have entered my api key as ([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})$
+0x[0-9a-fA-F]{40}
+\.*tmnsessionid\%3D(\w{32})\.*
+<img src='\/\/cdn-[0|1].example.org\/images\/background.[a-f0-9]{32}.jpg' \/>
+\s([VASFXBDEIL\.]{6})\s(\S{3,20})\s
+^/task/([a-zA-Z0-9_-]{22})/runs/([0-9]+)/exception$
+^ {9}(?<index>\d{3}) (?<step>.{8}) (?<procedureStep>.{8}) (?<class>.) (?<name>.{8}) {1,9}(?<length>\d{1,9}) $
+Updating instance our_instance_group: our_instance_group\/[0-9a-f]{8}-[0-9a-f-]{27} \(0\)
+(outputImage|getImage)\?fileId=([a-z0-9A-Z]{24})
+^\x20\x20{50}
+.state\('test', {[\n\r]* {8}url: '\/test',[\n\r]* {8}templateUrl: 'home\/test.tpl.html',[\n\r]* {8}controller: 'TestCtrl',[\n\r]* {8}controllerAs: 'test'[^$]*}\)
+\{gfm-extraction-([0-9a-f]{32})\}
+^Auction [a-f0-9]{8}-?[a-f0-9]{4}-?4[a-f0-9]{3}-?[89ab][a-f0-9]{3}-?[a-f0-9]{12} timedOut$
+background: url\(\/\/cdn-[0|1].example.org\/images\/background.[a-f0-9]{32}.jpg\)
+avocado-vt-joblock-[0-9a-f]{40}-[0-9]+-[0-9a-z]{8}\.pid
+ObjectID\(([0-9a-f]{24})\)
+^(\d+),(-|)(\d{1,6}|\d+\.\d+|\.\d+|),(-|)(\d{1,6}|\d+\.\d+|\.\d+|),(-|)(\d{1,6}|\d+\.\d+|\.\d+|),(-|)(\d{1,6}|\d+\.\d+|\.\d+|),(-|)(\d{1,6}|\d+\.\d+|\.\d+|),([01]{0,8})
+^[a-zA-Z\d\-_\s]{2,50}$
+index\.[a-z0-9]{32}\.html
+^(?:When )?I request a student with id ([a-f0-9]{24}) for that school$
+\d[ \d-]{15,22}
+[_a-zA-Z][_a-zA-Z0-9]{0,30}
+^[A-Z,0-9]{1,34}$
+^[a-zA-Z0-9_.-]{3,50}$
+commit\s+([a-f\d]{40})
+=.{32}$
+(card)[_]([\w-]{22})
+([^\s]+) ([^\s]+) \(git+\+([^#\s]+)#([^\s]{40})\)
+^(.+) Android Application - (.*) Build\/(.+)  - [0-9A-F]{8,8}-[0-9A-F]{4,4}-[0-9A-F]{4,4}-[0-9A-F]{4,4}-[0-9A-F]{12,12}$
+\$31\$(\d\d?)\$(.{43})
+usage: pymentapp.py \[-h\] \[-i style\] \[-o style\] \[-q quotes\] \[-f status\] \[-t\].?.?\s{20}\[-c config\] \[-d\] \[-p status\] \[-v\] \[-w\].?.?\s{20}path.?.?pymentapp\.py: error: the following arguments are required: path
+^\n                (?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})[Tt]\n                (?<hour>\d{2}):(?<minute>\d{2})(?::(?<second>\d{2})(?:\.(?<microsecond>\d{1,6}))?)?\n                (?<timezone>[Zz]|[+-]\d{2}:\d{2})?\n            $
+Updating instance foobar2: foobar2\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f-]{12} \(2\)
+^([a-fA-F0-9][a-fA-F0-9]){1,32}$
+\}\)[\n\r]* {6}.when\('\/test', {[\n\r]* {8}templateUrl: 'home\/test.tpl.html',[\n\r]* {8}controller: 'TestCtrl',[\n\r]* {8}controllerAs: 'test'[\n\r]* {6}\}\)
+(Signature keyId=my key,algorithm=hmac-sha256,headers=date,signature=[0-9a-zA-Z/+]{43}=)
+^commits/[^/]+/\S{40}$
+queryId:.{32}
+\/([0-9a-f]{3})\/([0-9a-f]{3})\/([0-9a-f]{3})\/([0-9a-f]{23})\/
+^[A-Z]{2}[0-9]{2}[A-Z0-9]{11,30}$
+^\s*(\={3,50})
+^(\d{16})|(\d{17}[\da-zA-Z])$
+^Digest realm=Users, nonce=\w{32}, qop=auth$
+^(.{50}\S*).*
+/nifi-api/flow/remote-process-groups/[a-f0-9\-]{36}/status
+http://file\d+\.agesage\.jp/flv/\d{8}/\d{10}_\d{6}\.flv
+^{@link\s+topic:(\w{32})(\s.+)?}$|^topic:(\w{32})$
+^[0-9]{6} (blob|tree) ([0-9a-f]{40})\t(.+)$
+^[0-9a-z][0-9a-z-]{0,30}[0-9a-z]$
+\( `name` = (:[0-9a-z]{32}) AND `age` = (:[0-9a-z]{32}) \)
+^[a-z0-9-_]+_([a-f0-9]{40}(\-[a-z0-9]+)?)\.tar\.gz$
+/nifi-api/controller-services/[a-f0-9\-]{36}
+(?<path>\/media\/display\/)(?<uuid>[0-9a-z-]{36})
+\n\s{25}
+(.{50}).*
+^(?:When )?I request teachers for an org with id ([a-f0-9]{24}) and a school with id ([a-f0-9]{24})$
+^`{32} example\n((?s).*)\n\.\n(?:|((?s).*)\n)`{32}$|^#{1,6} *(.*)$
+([a-z0-9]{40})(_\d+)?
+(== ([a-f0-9]{40}))
+/nifi-api/process-groups/(?:(?:root)|(?:[a-f0-9\-]{36}))/templates
+^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}_Basecall_2D_(.*)$
+.*(/objects/[0-9a-f]{2}/[0-9a-f]{38})$
+\nCreating migrations.\d{4}-\d{2}-\d{2}-\d{6}_hello.up.sql\nCreating migrations.\d{4}-\d{2}-\d{2}-\d{6}_hello.down.sql\n        
+^(tree|object) ([a-fA-F0-9]{40})$
+^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}([-+][0-9]{2}:[0-9]{2}|Z)$
+^https://steamcommunity.com/openid/id/([0-9]{17,25})
+\[%(\s*)(source|_bip|_client|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})#[a-zA-Z0-9_\-#:.$@*[\],?()]*(\s*)%\]
+^rgb\(\s{0,31}[\d]{1,3}\s{0,31},\s{0,31}[\d]{1,3}\s{0,31},\s{0,31}[\d]{1,3}\s{0,31}\)|rgba\(\s{0,31}[\d]{1,3}\s{0,31},\s{0,31}[\d]{1,3}\s{0,31},\s{0,31}[\d]{1,3}\s{0,31},\s{0,31}[\.\d]+\s{0,31}\)$
+^[a-z0-9\-_]{2,50}$
+[a-z_]{1}[a-z0-9_]{0,30}
+s\.setAttribute\('value', '(.{44})'\)
+\$stateProvider[\n\r]* {6}.state 'test',[\n\r]* {8}url: '\/test'[\n\r]* {8}templateUrl: 'home\/test.tpl.html'[\n\r]* {8}controller: 'TestCtrl'[\n\r]
+Creating missing vms: foobar2\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f-]{12} \(1\)
+https://example.com/v1/AUTH_account/container/object\?temp_url_sig=[a-f0-9]{40}&temp_url_expires=1086400
+/nifi-api/process-groups/(?:(?:root)|(?:[a-f0-9\-]{36}))/funnels
+(&amp|\?)sid=[0-9a-f]{32}$
+eiddcc[a-z]{38}
+(\d\d/\d\d)    (.{38}) ((\w|\s){3}) ((\s)*-?(\.|\d)*,\d\d) ((\s)*-?(\.|\d)*,\d\d)
+^12[0-9]{9}|13[0-9]{9}|14[579]{1}[0-9]{8}|15[012356789]{1}[0-9]{8}|17[0135678]{1}[0-9]{8}|18[0-9]{9}$
+\s*<!-- File hash: [0-9a-zA-Z]{32} -->\s*$
+^I should get an organization with id ([a-f0-9]{24})$
+^[A-Za-z0-9_-]{40,50}$
+^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$
+[0-9a-fA-F]{8}-?[0-9a-fA-F]{4}-?[0-9a-fA-F]{4}-?[0-9a-fA-F]{4}-?[0-9a-fA-F]{12}
+compilation-.*\/[0-9a-f]{8}-[0-9a-f-]{27}
+<script src='\/js\/app.[a-f0-9]{32}.js'><\/script>
+Name: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})
+^([A-Za-z]\d{7}|\s{8}) ([A-Za-z]\d{7}|\s{8}) ([0-9a-fA-F]{8}|\s{8}) ([0-9a-fA-F]{8}) (.*)$
+(<videomessage[^>]*\ssid=([a-f0-9]{32}))
+(^[a-z]:)?/.{1,50}$
+http://media\w+\.tube8\.com/flv/[a-z0-9A-Z]{32}/[a-z0-9A-Z]{8}/\d{4}/\d{2}/[a-z0-9A-Z]+/[a-z0-9A-Z]+\.flv
+^rgba\(\d{1,3}(\.\d{1,2})?%?, ?\d{1,3}(\.\d{1,2})?%?, ?\d{1,3}(\.\d{1,2})?%?, ?[01](\.\d{1,6})?\)$
+^([0-9]{1,20}) CREATED (\S+) ([0-9]{1,20}) (\S+) (.*)$
+(.*)/objects/[0-9a-f]{2}/[0-9a-f]{38}$
+powershell -executionpolicy bypass & { if \(Test-Path variable:global:ProgressPreference\){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'}\. c:/Windows/Temp/packer-ps-env-vars-[a-z0-9A-Z]{8}-[a-z0-9A-Z]{4}-[a-z0-9A-Z]{4}-[a-z0-9A-Z]{4}-[a-z0-9A-Z]{12}\.ps1 &'c:/Windows/Temp/script.ps1' exit \$LastExitCode }
+http://www\.asa\.tv/captured/gcuppapa/[a-z0-9A-Z]{32}_1\.jpg
+^[0-9a-f]{8}-?[0-9a-f]{4}-?[1-5][0-9a-f]{3}-?[89ab][0-9a-f]{3}-?[0-9a-f]{12}$
+\/\* -{30} [$\w]+ -{30} \*\/
+^/.*/tmp/python/src/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+^(?:When )?I request a teacher with id ([a-f0-9]{24}) for that school$
+^\.sprockets-manifest-[a-f0-9]{32}.json
+^[a-fA-F\d]{32}:[a-fA-F\d]{32}$
+\.(\d*)(?:9{5,20}|0{5,20})\d{0,2}(?:e(.+)|$)
+\[[\d-]{10} [\d:.]{12}] \[warn] log from a renderer process
+vendor-\w{32}
+^Version: ([a-f0-9]{40})$
+^[a-f0-9]{32,}  [^ ].*$
+^ETag: ([a-z0-9]{32})
+/nifi-api/flowfile-queues/[a-f0-9\-]{36}/drop-requests
+^([0-9a-fA-F]{40})\s+tags\/(.+)(\^[0-9]+|\~[0-9]+)$
+^(.*)_\d+_[A-Z0-9]{32}$
+(sub)[_]([\w-]{22})
+\$routeProvider[\n\r]* {6}.when\('\/test', {[\n\r]* {8}templateUrl: 'home\/test.tpl.html',[\n\r]* {8}controller: 'TestCtrl'[^$]*}\)
+/nifi-api/process-groups/(?:(?:root)|(?:[a-f0-9\-]{36}))/output-ports
+^Q([012]{27})([012]{27})([012]{27})\z
+^([0-9a-f]{32})-([0-9a-f]{32})\.
+^[a-zA-Z0-9_\-]{1,50}$
+5[0-9a-zA-Z]{50}
+^otpauth://totp/roberto@heapsource\.com\?secret=\w{32}$
+`age` BETWEEN (:[0-9a-z]{32}) AND (:[0-9a-z]{32})
+   ([a-zA-Z0-9\-]{36}) - ([^\n]+)
+^[0-9A-Za-z\\_\.]{0,50}$
+src='//cdn-[0|1].example.org/assets/b.[a-f0-9]{32}.js'
+Connection to node .{36} at .+:\d+ in data center .+ closed unexpectedly: bork
+^Digest realm=Users, nonce=\w{32}, algorithm=MD5-sess$
+\s*\*{3}[0-9a-f\-]{36}\*{3}\s*
+0x[0-9a-f]{32}
+Statement [0-9a-f]{32} prepared on node a4a70900-24e1-11df-8924-001ff3591711 \(h3.example.com:1234\)
+^arn:aws:cognito-identity:[^:]+:[0-9]{12}:identitypool/[^:]+:([0-9a-f]){8}-([0-9a-f]){4}-([0-9a-f]){4}-([0-9a-f]){4}-([0-9a-f]){12}$
+(^|\s)(([a-zA-Z0-9_-]+):)?([a-zA-Z0-9]{40})
+^(V|R|E)\t([0-9]{12}Z)\t([0-9]{12}Z)?\t([0-9a-fA-F]{2,})\t([^\t]+)\t(.+)
+\A/images/email.[a-f0-9]{32}.png\z
+^/.*/tmp/java/src/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})[ ]*\-[ ]*([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$
+[0-9a-f]{40} \d+ (\d+)
+(\d{6})((?:C|D)R?)([0-9,]{15})(N\d{3}|NMSC)([0-9P ]{16}|NONREF)(.*)
+http://www\.example\.com/v1/recipes/[a-f0-9]{24}
+^\:(\d{6}) (\d{6}) (\w{40}) (\w{40}) (\w{1}[0-9]*)\t(.*)$
+(IOPlatformUUID = ([0-9A-F-]{36}))
+snapper\.ws=([0-9a-zA-Z.~_-]{24,})
+97[89]{1}(?:-?\d){10,16}|97[89]{1}[- 0-9]{10,16}
+^(?:When )?I request a teacher with id ([a-f0-9]{24}) for that org$
+((a)b{28,}c|d)x
+^({SSHA})?[a-z0-9\+\/]{32,38}?(==)?$
+\[[\d-]{10} [\d:.]{12}] \[warn] Log from nw.js
+(trace_id:\w{32})
+:HasExtendedXMP\s*(=\s*[']|>)(\w{32})
+^(record|gtable|app|applet|workflow|globalworkflow|job|analysis|project|container|file|database)-[0-9A-Za-z]{24}$
+.*[Cc]{2,3}(\d{5,})[CcAa]{3,6}(\d{5,})[CcAa]{2,3}(\d{5,})[Cc]{2,3}.*
+[&#]([0-9A-Za-z]{10,48})[&#]
+[a-f0-9]{8}-?[a-f0-9]{4}-?4[a-f0-9]{3}-?[89ab][a-f0-9]{3}-?[a-f0-9]{12}
+connected to node .{36} at host0:9999 in data center dc
+^arn:aws:config:[\w-]+:\d{12}:aggregation-authorization/\d{12}/[\w-]+$
+^\S{2,50}$
+\/id\/(\S{40})
+^skit1 \([0-9a-f]{40}\) \[BRANCH=master\]$
+[0-9a-f]{32}(-data)?\.[0-9a-z]+
+[0-9a-f]{8}-[0-9a-f-]{27}
+^(\$md5,rounds=[0-9]+\$|\$md5\$rounds=[0-9]+\$|\$md5\$)[a-z0-9\/.]{0,16}(\$|\$\$)[a-z0-9\/.]{22}$
+([a-f0-9]{40}) (.+)
+^(\d+):UKEY=(.{16})\sTEXT=(.{16})\sRKEY=(\S+)\sCIPH=(\S+)
+^[a-z0-9-]{0,50}$
+(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}.\d{6})\s-\s((?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?)$
+^signed\.sig=.{27} path=\/ httponly$
+^(?:[1-9][0-9]*/)?[a-f0-9]{40}$
+^UC([a-zA-Z0-9\-\\_]{22})$
+(?:^5[1-5]\d{14}$)|(?:^2(?:2(?:2[1-9]|[3-9]\d)\d{2}|[3-6]\d{4}|7(?:[01]\d{3}|20\d{2}))\d{10}$)
+[0-9]{10}_[a-zA-Z0-9]{34,}
+^[A-Za-z0-9-_]{40}$
+^(?:eval|local-test_logging\.js|[a-f0-9]{40}\.js)
+[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}.+
+.*(\w{8}-\w{4}-\w{4}-\w{4}-\w{12})
+[idm]_\w{32}
+\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}((.\d{3,6})?([+-](\d{4|\d{2}:\d{2}}))?)?
+^(.{3,50})$
+Corp: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})
+\A\/attachment\/([a-f0-9\-]{36})\/(.*)
+^([0-9]{1,3}).([0-9]{1,5}).([0-9]{1,10})-([0-9]{1,3}).([0-9]{1,5}).([0-9]{1,10})$
+^[a-f0-9]{32}:[a-f0-9]{32}$
+^  (.{40,}) - (OK|NOT FOUND|CORRUPT|FOUND: (.*))$
+kernel: (.{0,29}) ?IN
+/rusqbins/((?i)[A-F0-9]{8}\-[A-F0-9]{4}\-4[A-F0-9]{3}\-[89AB][A-F0-9]{3}\-[A-F0-9]{12})/requests/?$
+^((www\.)?(\*\.)?[A-Za-z0-9]+([\-\.]{1,2}[A-Za-z0-9]+)*\.[A-Za-z]{2,40}(:[0-9]{1,40})?(\/.*)?)$
+^(.*)/(\d+|%[^%]+%|env_\w+_[a-f0-9A-F]{32,})$
+.*bind to ([0-9a-f]{40}).*
+\s+inet (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) netmask (([0-9a-f]){1,8}) broadcast (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+(\d{4}-\d{2}-\d{2}).+(\d{2}:\d{2}):\d{2}.+(\d{4}-\d{2}-\d{2}).+(\d{2}:\d{2}):\d{2}
+\ASprdAuth apiKey=test, data=post https:\/\/api.spreadshirt.net\/api\/v1\/orders [0-9]+, sig=[0-9a-f]{40}, sessionId=abcd-1234\Z
+<td class=result_text> <a href=\/title\/(tt[0-9]{7,9})\/\?ref_=fn_al_tt_\d >(.*)<\/a>.* \((\d{4})\)..(.{9})
+\n\s{25,26}
+^([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12})|([a-fA-F0-9]{8}[a-fA-F0-9]{4}[a-fA-F0-9]{4}[a-fA-F0-9]{4}[a-fA-F0-9]{12})$
+(\+[1-9]\d{0,3}) +\d{1,10} +([\d][\d \-]{0,24}[\d])
+^([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12})$
+Moon: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})
+1-[0-9a-f]{8}-[0-9a-f]{16}
+Updating instance foobar1: foobar1\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f-]{12} \(3\)
+^PGTIOU-[0-9]{10,}-[a-zA-Z0-9]{32}$
+([0-9a-f]){40}
+^mlid=(w\d{16})\r\npasswd=(.{16,32})$
+\A[A-Za-z0-9._][A-Za-z0-9._-]{0,31}\Z
+Current IPTC Digest: (0|#){32}
+[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}
+Connected to node .{36} at example\.com:12321 in data center dc1
+^([0-9]+) (.+) ([0-9a-fA-F]{40})\t(.+)$
+-([0-9a-f]{32,40})\.[^.]+(?:\.map)?$
+\A\{.*\}([0-9a-fA-F]{32})([!-~]{32})\z
+[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f??]{4}-[0-9a-f]{12}$
+\A((\d{1,2}[-\/]\d{1,2}[-\/]\d{4})|(\d{4}[-\/]\d{1,2}[-\/]\d{1,2})|(\d{1,2}-[A-Za-z]{3,4}-\d{4})|([A-Za-z]{3,4} +\d{1,2} \d{2,4}))(T| +)(\d{1,2}:\d{2}(:\d{2})?(\.\d+)? ?(PM|AM|pm|am)?((-|\+)\d{2}:?\d{2})?Z?)\z
+^[a-zA-Z\s]{3,50}$
+^[gatcn]{11,50}$
+\A\$5\$0123456789abcdef\$[a-zA-Z0-9./]{43}\z
+ember-states-([0-9a-f]{40})
+\/assets\/ixti-[a-f0-9]{32}.gif
+^https:\/\/example\.com\/authorize\?client_id=1234&nonce=[\w\d]{32}&response_type=code&scope=openid&state=[\w\d]{32}$
+^([ABC])\t([0-9]{1,20})\tCREATED\t(\S+)\t([0-9]{1,20})\t([+-]?[0-9]{1,20}|NONE)\t(\S+)\t(.*)$
+href=(.*) title=.* alt= coords=(-?[0-9]{1,6}),(-?[0-9]{1,6}),(-?[0-9]{1,6}),(-?[0-9]{1,6})
+^:[0-7]{6} [0-7]{6} [0-9a-fA-F]{40} [0-9a-fA-F]{40} ([ACDMR])\d{0,3}\t(.+)(?:\t(.+))?$
+^(revert: )?(feat|fix|polish|docs|style|refactor|perf|test|workflow|ci|chore|types)(\(.+\))?: .{1,50}
+<a href=([^#]+)>([^<]+)</a>\n\s+\(<a (?:title=MD5 hash\n\s+)href=[^?]+\?:action=show_md5&ampdigest=([0-9a-f]{32})>md5</a>\)
+POSITION\s{0,5}\.{0,5}\s{0,5}(\d+\.\d+)\s{0,3}([NS])\s{0,5}\.{0,5}\s{0,5}(\d+\.\d+)\s{0,3}([WE])[\s\.]
+\/css\/style.[a-f0-9]{32}.css
+[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[8|9|aA|bB][a-f0-9]{3}-[a-f0-9]{12}
+([A-Za-z_][A-Za-z0-9_]{2,30}|(__.*__))$
+Playing from \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} \(\d+.\d+\) until \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} \(\d+.\d+\)\.
+0x([a-fA-F0-9]{40})
+^sequenceflow-end-yellow-blue-[A-Za-z0-9]{25}$
+^/trireme_uid/[a-zA-Z0-9_\-]{1,32}(/[0-9]{1,32}){0,1}$
+[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}
+^I should get a school with id ([a-f0-9]{24})$
+\}\)[\n\r]* {6}.state\('test', {[\n\r]* {8}url: '\/test',[\n\r]* {8}templateUrl: 'home\/test.tpl.html',[\n\r]* {8}controller: 'TestCtrl',[\n\r]* {8}controllerAs: 'test'[\n\r]* {6}\}\)
+[a-f0-9]{8}[a-f0-9]{4}4[a-f0-9]{3}[89ab][a-f0-9]{3}[a-f0-9]{12}
+/nifi-api/flow/connections/[a-f0-9\-]{36}/status
+^[a-zA-Z0-9][-._a-zA-Z0-9]{0,48}([a-zA-Z0-9])?$
+INGRESSCOOKIE=[0-9a-f]{40}
+^(\d{1,9})\.(\d{1,9})\.(\d{1,9})(\.\d{1,9})?-([^-]+)-([^-]+)$
+/nifi-api/input-ports/[a-f0-9\-]{36}/run-status
+^VALIDSIG.+([0-9A-F]{40})
+document\.cookie=a=([a-f0-9]{32})path=/
+[0-9a-f]{8}([0-9a-f]{8}).{24}([0-9a-f]{4})$
+[\x20\x20]\x20.{6}(?:RSA1|RSA2|DSS1|DSS2).{20}
+(?:0[xX])[A-F0-9]{40}
+^([0-9]{1,30})|([0-9]+\.[0-9]+[e]\+\[0-9]+)$
+^([a-z0-9]{40})\s+(.+)$
+token.*([a-z0-9]{32})
+^([0-9/]{10}) +([0-9:]{4,5}( [AP]M)?) +(<DIR>|[0-9,]+) +([^ ]{0,11}) +(.+)$
+(src=(main\.[a-z0-9]{0,32}\.js))
+^([a-f0-9]{40}) refs/tags/(\S+)(\^\{\})?$
+.when '\/test',[\n\r]* {8}templateUrl: 'home\/test.tpl.html'[\n\r]* {8}controller: 'TestCtrl'[\n\r]* {8}controllerAs: 'test'[\n\r]
+^overwrite\.sig=.{27} path=\/ httponly$
+^(?:When )?I request a section with id ([a-f0-9]{24}) for that org$
+url\(fonts\/myfont\.woff\?([0-9a-f]{32})\)
+0x(?:[0-9a-f]{40}|[0-9A-F]{40})
+_.{39}
+([0-9a-f]{40})\s*(.*)
+/nifi-api/flow/processors/[a-f0-9\-]{36}/status/history
+ PROCESS(.{32})WORKING\n
+/nifi-api/processors/[a-f0-9\-]{36}/run-status
+<([0-9a-f]{4})[0-9a-f]{4}[0-9a-f]{4}\$\n           ([0-9a-f]{4})[0-9a-f]{4}\$\n           ([0-9a-f]{8})\@(\S+)>
+\$stateProvider[\n\r]* {4}.state\('test', {[\n\r]* {6}url: '\/test',[\n\r]* {6}templateUrl: 'home\/test.tpl.html',[\n\r]* {6}controller: 'TestCtrl'[^$]*}\)
+^[a-fA-F0-9]{32}:[a-zA-z0-9]{32}$
+^([0-9a-z](?:[_-]?[0-9a-z]){1,35}|\+)/(devices)/([0-9a-z](?:[_-]?[0-9a-z]){1,35}|\+)/(events|up|down)([0-9a-z/]+)?$
+^(\$md2\$)?[a-f0-9]{32}$
+^([0-9a-fA-F]{8,16}) ([0-9a-fA-F]{8,16} )?[tTwW] (.*)$
+(.*t=)[a-zA-Z0-9]{32}(.*)
+[a-z_][a-z0-9_]{2,30}$
+Faction: ([a-zA-Z0-9]{1}[a-zA-Z0-9'. -]{1,48}[a-zA-Z0-9.]{1})
+[a-z]{3,4} ([a-z]{3}) (\d{1,2}) (\d{1,2}):(\d{2}):(\d{2}) ([+-]\d{2}:?\d{2}) (\d{4})
+.*connectID=[^&\x20\r\n]{25}
+.*<OBJECT\s+[^>]*type\s*=[\x20\x20]\x20{32}
+.*\x20j2se[^\x20]*(initial|max)-heap-size\s*\x20\s*(\x20|\x20)[^\2]{50}
+.*<[0-9a-zA-Z_]+\x3afill[\s][^>]*method[\s]*=[\s]*(\x27[^\x27]{32}|\x22[^\x22]{32}|[^\s>]{32})
+.*get-dated-rev\x20\x20\x20\d{1,4}\x20([^T\x20\x20]{9}|[^\x20]{4}\x20[^\x20]{3}|[^\x20]{4}\x20[^\x20]{2}\x20[^\x20]{3})
+.*<\w+\x20ill\s[^>]*method\s*=\s*(\x20[^\x20]{32}|\x20[^\x20]{32}|[^\s>]{32})
+.*mfcisapicommand=[^&\r\n\x20]{25}
+.*wqPassword=[^\r\n\x20]{29}
+\x20\x20\x20.{2}\x20.{3}\x20\x20.{32}\x20
+.*username=[^&\x20\r\n]{25}
+^[^\n]*[\x20-\xFF].*\nAccept-Language\x3A\s*[\S]{32}
+^Authorization\x20\s*Negotiate\s*((YE4G.{40}LgMc)|(YIIQ.{40}QUFB))
+.*isComponentInstalled\s*\([^,\)]{25}
+.*cache_lastpostdate\[[^\]]+\]=[^\x20\x3B\x3D]{30}
+([*]a[_] ){40}[*]a_
+([*]a[_] ){20}[*]a_
+.*A.*[BD]C{43,43}D[^E].*

@@ -106,7 +106,7 @@ rule lexer = parse
     |  [' '-'/' ':'-'@' '['-'`' '{' - '~']      {Latom (Lexing.lexeme lexbuf)}
     |  ['\x80'-'\xff'] ['\x80'-'\xff'] ['\x80'-'\xff'] {Latom (Lexing.lexeme lexbuf)}
     |  ['\x80'-'\xff'] ['\x80'-'\xff'] {Latom (Lexing.lexeme lexbuf)}
-    |  "\\\\" 			    {print_string "dash"; Latom "\\\\"}
+    |  "\\\\" 			    {Latom "\\\\"}
     |  "\\" [' '-'/' ':'-'@' '['-'`' '{' - '~']     {Latom (let s = (Lexing.lexeme lexbuf) in String.sub s  1 (String.length s - 1))}
 
 

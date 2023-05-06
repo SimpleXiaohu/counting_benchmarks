@@ -652,7 +652,7 @@ and __ocaml_lex_lexer_rec lexbuf __ocaml_lex_state =
 
   | 76 ->
 # 109 "regexlex.mll"
-                     (print_string "dash"; Latom "\\\\")
+                     (Latom "\\\\")
 # 657 "regexlex.ml"
 
   | 77 ->

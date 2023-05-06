@@ -7,7 +7,7 @@ open Regexlex
 open Regex
 open Str
 open Filename
-open Unix
+
 
 let outputSingleof line =
   try
@@ -17,31 +17,40 @@ let outputSingleof line =
   with _ -> print_string (line ^ ":error\n")
 
 let teststr s f =
-  "(assert (= x \"" ^ s ^ "\"))\n(assert (" ^ f ^ " x y))\n(check-sat)"
+  "(assert (= x \"" ^ s ^ "\"))\n\
+  (assert (" ^ f ^ " x y))\n\
+  (check-sat)"
 
 let genCountSMTBigLen s =
-  "\n(declare-const X String)\n(assert (str.in_re X " ^ s
-  ^ "))\n(assert (< 100 (str.len X)))\n(check-sat)\n(get-model)\n\n"
-
-let genCountSMTSmallLen s =
-  "\n(declare-const X String)\n(assert (str.in_re X " ^ s
-  ^ "))\n(assert (< 20 (str.len X)))\n(check-sat)\n(get-model)\n\n"
-
-let genCountSMTBigLenWithInter s =
-  "\n(declare-const X String)\n\
-  (assert (str.in_re X " ^ s^ "))\n\
-  (assert (str.in_re X (_ re.loop 0 300) (re.range \"0\" \"9\")))\n\
+  "(declare-const X String)\n\
+  (assert (str.in_re X " ^ s ^ "))\n\
   (assert (< 100 (str.len X)))\n\
   (check-sat)\n\
-  (get-model)\n"
+  (get-model)"
 
-let genCountSMTSmallLenWithInter s =
-  "\n(declare-const X String)\n\
+let genCountSMTSmallLen s =
+  "(declare-const X String)\n\
   (assert (str.in_re X " ^ s ^ "))\n\
-  (assert (str.in_re X (_ re.loop 0 300) (re.range \"0\" \"9\")))\n\
   (assert (< 20 (str.len X)))\n\
   (check-sat)\n\
-  (get-model)\n"
+  (get-model)"
+
+let genCountSMTBigLenWithInter s =
+  "(declare-const X String)\n\
+    (assert (str.in_re X " ^ s ^ "))\n\
+    ; sanitize danger characters:  < > \' \" &\n\
+    (assert (not (str.in_re X (re.++ re.all (re.union (str.to_re \"\\u{3c}\") (str.to_re \"\\u{3e}\") (str.to_re \"\\u{27}\") (str.to_re \"\\u{22}\") (str.to_re \"\\u{26}\")) re.all))))\n\
+    (assert (< 50 (str.len X)))\n\
+    (check-sat)\n\
+    (get-model)"
+let genCountSMTSmallLenWithInter s =
+  "(declare-const X String)\n\
+    (assert (str.in_re X " ^ s ^ "))\n\
+    ; sanitize danger characters:  < > \' \" &\n\
+    (assert (not (str.in_re X (re.++ re.all (re.union (str.to_re \"\\u{3c}\") (str.to_re \"\\u{3e}\") (str.to_re \"\\u{27}\") (str.to_re \"\\u{22}\") (str.to_re \"\\u{26}\")) re.all))))\n\
+    (assert (< 10 (str.len X)))\n\
+    (check-sat)\n\
+    (get-model)"
 
 let contains s1 s2 =
   let re = Str.regexp_string s2 in
@@ -73,9 +82,18 @@ let anon_fun filename = inputfile := filename
 let () = Arg.parse speclist anon_fun usage_msg
 
 (* make output subdirectory *)
-let outputdir = parent_dir_name ^ dir_sep ^ "output" ^ dir_sep ^ !outputsubdir;;
+let outputdir = !outputsubdir
+;;
 
-if not (Sys.file_exists outputdir) then Sys.mkdir outputdir 0o777
+let rec mkdir_rec path =
+  match Sys.file_exists path with
+  | true -> ()
+  | false ->
+    let parent = Filename.dirname path in
+    mkdir_rec parent;
+    Sys.mkdir path 0o777;;
+
+mkdir_rec outputdir 
 
 (* generate smt2 benchmarks *)
 let genCountSMT s =
@@ -85,10 +103,9 @@ let genCountSMT s =
 let genCountSMTWithInter s =
   if contains !outputsubdir "large" then genCountSMTBigLenWithInter s
   else genCountSMTSmallLenWithInter s
+  (* genCountSMTSmallLenWithInter s *)
 
-let getSMT s = 
-  if !inter then genCountSMTWithInter s
-  else genCountSMT s
+let genSMT s = if !inter then genCountSMTWithInter s else genCountSMT s
 
 let outputSingleofTest line n =
   try
@@ -98,7 +115,7 @@ let outputSingleofTest line n =
       open_out (concat outputdir "instance" ^ string_of_int n ^ ".smt2")
     in
     output_string outf (";test regex " ^ line ^ "\n");
-    output_string outf (getSMT (fst (trantoPT 1 at)));
+    output_string outf (genSMT (fst (trantoPT 1 at)));
     close_out outf
   with _ -> print_string (line ^ ":error\n")
 
