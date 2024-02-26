@@ -1,11 +1,5 @@
-import sys
-import re
-import argparse
-import os
-import shutil
-from datetime import datetime
+import sys, re, argparse, os, json
 from runner import RunnerInterface
-import json
 from dataclasses import dataclass
 from util import regexesCountLine
 
@@ -101,13 +95,7 @@ argparser.add_argument(
     metavar="string",
 )
 
-# argparser.add_argument(
-#     "--loop-count",
-#     help="the sum of the loop counts should satisfy this condition",
-#     default="all",
-#     metavar="large|small|all",
-#     choices=["large", "small", "all"],
-# )
+
 argparser.add_argument("bench")
 
 args = argparser.parse_args()

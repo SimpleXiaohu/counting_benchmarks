@@ -1,0 +1,12 @@
+Bencharks - selected
+
+Author: Lenka Turonova
+
+
+This folder contains a set of selected benchmarks 
+
+- with bounded repetition
+- ABOVE - the sum of counters is above 1000
+- BETWEEN - the sum of counters is between 20-1000
+- TOOBIG - the sum of counters is above some limit
+- NESTED - regexes with nested bounded repetition

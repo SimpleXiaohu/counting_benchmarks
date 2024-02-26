@@ -1,0 +1,13 @@
+Bencharks
+
+Author: Lenka Turonova
+
+
+This folder contains a set of all benchmarks.
+
+
+Sources:
+
+bech1, bech2, bech3 - Snort (from Ivan Homoliak)
+internetSources, stackoverflow (from James Davis repo)
+the others - viz APLAS, OOPSLA

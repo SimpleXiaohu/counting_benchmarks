@@ -1,13 +1,9 @@
 from multiprocessing.dummy import Pool
-import os
 import glob
-import subprocess
 from tqdm import tqdm
-from time import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 timelimit = 60
-
 
 @dataclass
 # Interface to mutithreadingly run each file of a benchmark directory.

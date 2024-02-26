@@ -1,0 +1,553 @@
+/.*SEARCH \/ HTTP\/1\.1\x0d\x0aHost\x3a.{0,251}\x0d\x0a\x0d\x0a/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x02\x49\xf1/
+/.{15}\x00\x01\x86\xF3.{4}\x00\x00\x00\x07/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\x99/
+/\x03create\s+(aggregate\s+)*function\s+\S{50}/smi
+/^.*POST\s+\x2f[^\s\x2f]{9,}\x2f[^\s]{235}/i
+/^X?PAT\s+[^\n]{1024}/smi
+/^User-Agent\x3a[^\n]{244,255}/smi
+/^\w+\s+SUBSCRIBE\s[^\n]{100}/smi
+/goaway\?message=[^\s]{500}/smi
+/.{3}\xffSMB\x32/
+/.{14}.*\x00\x00\xFC/
+/<OBJECT\s+[^>]*type\s*=[\x22\x27]\x2f{32}/smi
+/\x00\x00\x00\x00[^\x00]{262,}/R
+/.{31}[sS]\x00[pP]\x00_\x00[sS]\x00[tT]\x00[aA]\x00[rR]\x00[tT]\x00_\x00[jJ]\x00[oO]\x00[bB]\x00/
+/.{11}.*\x07[aA][uU][tT][hH][oO][rR][sS]/
+/.*[dD][eE][lL][eE][^\x0a]{10}/
+/\sRENAME\s[^\n]{100}/smi
+/.* LIST \x22.*.{0}.*\x22 \{/
+/^0*(([1-9]\d{3,})|([7-9]\d\d)|(6[7-9]\d)|(66[8-9]))/R
+/.{1}.*[sS][hH][aA][dD][oO][wW]/
+/^SITE\s+ZIPCHK\s[^\n]{100}/smi
+/ALTER\s.*?FILE\s+((AS|MEMBER|TO)\s+)?(\x27[^\x27]{512}|\x22[^\x22]{512})/smi
+/^INVITE\s+sip\x3A[^\r\n\x40]+\x40((192\.0\.[02]\.\d{1,3})|(127\.\d{1,3}\.\d{1,3}\.\d{1,3})|(128\.0\.\d{1,3}\.\d{1,3})|(191\.255\.\d{1,3}\.\d{1,3})|(223\.255\.255\.\d{1,3})|(2(2[4-9]|[34][0-9]|5[0-5])\.\d{1,3}\.\d{1,3}\.\d{1,3}))/smi
+/^USER\s+[^\n]{100,}/smi
+/\(\s*(\x27[^\x27]*\x27|\x22[^\x22]+\x22)\s*,\s*(\x27[^\x27]{1024,}|\x22[^\x22]{1024,})/si
+/.*[wW][hH][oO]=.*.{0}.*;/
+/^AUTHINFO\s+USER\s[^\n]{200}/smi
+/.{3}\xFF[sS][mM][bB]\x25.{56}\x26\x00.{5}\x5c\x00[pP]\x00[iI]\x00[pP]\x00[eE]\x00\x5c\x00.{0}\x05.{1}\x0b.{29}\xB8\x4A\x9F\x4D\x1C\x7D\xCF\x11\x86\x1E\x00\x20\xAF\x6E\x7C\x57/
+/.{31}.*[xX]\x00[pP]\x00_\x00[eE]\x00[nN]\x00[uU]\x00[mM]\x00[rR]\x00[eE]\x00[sS]\x00[uU]\x00[lL]\x00[tT]\x00[sS]\x00[eE]\x00[tT]\x00/
+/^CAPA\s[^\n]{10}/smi
+/.{0,16}\x54\x4a\x50\x69\x6e\x67\x50\x72\x6f\x20\x62\x79\x20\x4a\x69\x6d/
+/.*[xX][tT][nN][dD][^\x0a]{50}/
+/^XTND\s[^\n]{50}/smi
+/.{11}\x00\x01\x86\xE4.{4}\x00\x00\x00\x06/
+/.* [cC][hH][oO][wW][nN] [^\x0a]{100}/
+/.* [zZ][iI][pP][cC][hH][kK] [^\x0a]{100}/
+/.{0,4}[gG][eE][tT] /
+/.*[pP][aA][sS][sS] [^\x0a]{100}/
+/.*[sS][iI][tT][eE] [^\x0a]{100}/
+/^File[0-9]+=http\x3a\x2f\x2f[^\n]{150}/Rsmi
+/.*[sS][iI][tT][eE] .*.{0}.*[eE][xX][eE][cC] /
+/\x2Edll[\x2F\x5C]\x23[^\x3E\x00\s\x2F\x5C]{6}/i
+/^NLST\s+[^\n]*\x2a{10}/smi
+/.{11}\x00\x03\x0D\x70.{4}\x00\x00\x00\x01/
+/^User-Agent\x3A[^\r\n]*Agent[0-9]{7}/smi
+/.*From:.*.{0}.*<><><><><><><><><><><><><><><><><><><><><><>.{1}.*\(.{1}.*\)/
+/^GET[^s]{432}/sm
+/^\s*Accept-Language\s*|3a|\s*([^\r\n]*?\x2c){20}/mi
+/^\s*Cookie\s*\x3a.*?OvOSLocale\s*\x3d\s*[^\x3b\s]{249}/mi
+/contenttype=[^\r\n\x3b\x38]{100}/smiU
+/.* LSUB [^\x0a]{100}/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x02\x49\xf1/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\x88/
+/GET\s\x2f[^\r\n]{900}/smi
+/\x2Fbi\x2Fservlet\x2FThinstall(Pre|Result).*^User-Agent\x3A[^\r\n]*\.exe[^\r\n]*\x7B[\dA-Za-z]{8}-[\dA-Za-z]{4}-[\dA-Za-z]{4}-[\dA-Za-z]{4}-[\dA-Za-z]{12}\x7D\x7C[\dA-Za-z]{8}\x7C\d{5}-\d{3}-\d{7}-\d{5}/smi
+/.*[aA][uU][tT][hH][^\x0a]{50}/
+/.{31}.*[xX]\x00[pP]\x00_\x00[pP]\x00[eE]\x00[eE]\x00[kK]\x00[qQ]\x00[uU]\x00[eE]\x00[uU]\x00[eE]\x00/
+/.{11}\x00\x01\x86\xF3.{4}\x00\x00\x00\x07/
+/^USER\s[^\n]{49}/smi
+/\x3D[^\s\n]{88}/si
+/^APOP\s[^\n]{256}/smi
+/^Max-Forwards\x3A\s+(\d{3,}|[89]\d|7[1-9])/smi
+/\sEXAMINE\s[^\n]{100}/smi
+/^DELE\s[^\n]{10}/smi
+/^newgroup\x3a[^\n]{32}/smi
+/PUTOLF\s+((\S+\s+){4}[^\s]{256}|(\S+\s+){6}[^\x3c]{512})/i
+/.{7}\x00\x00\x00\x00/
+/^\x23\d+\x7c([0-9A-E]{2}\x2d){5}[0-9A-E]{2}\x7croogoo\x7c/smi
+/name=\s*[^\r\n\x3b\s\x2c]{300}/smi
+/skype4com\x3A[A-Z\d]{0,6}[^A-Z\d]/smi
+/^RCPT TO\x3a\s*[\w\s@\.]{200,}\x3b[\w\s@\.]{200,}\x3b[\w\s@\.]{200,}/smi
+/^sendme\x3a[^\n]{21}/smi
+/\sAPPEND\s[^\n]{256}/smi
+/^PASS\s[^\n]{49}/smi
+/.{7}\x00\x01/
+/unescape\s*\x28(\x22|\x27|\x26quot\x3B|\x5c\x22)[\x25\x5c][0-9a-f]{2}[\x25\x5c][0-9a-f]{2}/smi
+/.{15}\x00\x01\x86\xA5.{4}\x00\x00\x00\x02/
+/^SOML FROM\x3a\s+[\w\s@\.]{200,}\x3b[\w\s@\.]{200,}\x3b[\w\s@\.]{200,}/smi
+/^\s*MAIL\s+[^\s\n][^\n]{1006,}/smi
+/^Max-dotdot[\s\r\n]*\d{3,}/msi
+/.{3}\xFF[sS][mM][bB]\x25.{56}\x26\x00.{5}\x5c\x00[pP]\x00[iI]\x00[pP]\x00[eE]\x00\x5c\x00.{0}\x05.{1}\x0b.{29}\xA0\x01\x00\x00\x00\x00\x00\x00\xC0\x00\x00\x00\x00\x00\x00\x46/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xF3/
+/^Location\:[^\n]{128}/smi
+/^COPY[^s]{432}/sm
+/.{1}.*\.\./
+/.{11}\x00\x01\x86\xB8.{4}\x00\x00\x00\x02.{0,251}%x %x/
+/\x2fWebID\x2fIISWebAgentIF.dll[^\n\x26\x3f]*\x3fRedirect\x3furl=[^\n\x26\x3f]{1024}/smi
+/.*Content-Type:[^\x0A]{50}/
+/^CON\w{1,10}\d+\xAE[^\r\n]{1,20}\x3B/smi
+/.{15}\x00\x05\xF7\x68.{4}\x00\x00\x00\x0D/
+/WebAdmin\x2Edll\x3F[^\r\n]*?View=Logon.*?\r\n\r\n[^\r\n\x26]*User=[^\r\n\x26]{100}/smi
+/.*[pP][rR][iI][vV][mM][sS][gG] [nN][iI][cC][kK][sS][eE][rR][vV] [iI][dD][eE][nN][tT][iI][fF][yY][^\x0a]{150}/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x01/
+/GET\s+\x2fstream\x2f\x3f[^\x0a\x0d\x00\x20\x2f\x3d\x3b]{800}/smi
+/.{11}\x00\x01\x86\xBC.{4}\x00\x00\x00\x01.{4}.*\|/
+/^PUT[^s]{432}/sm
+/^UNLOCK\s+\S+\s+\S{100}/sm
+/^Accept\x2dLanguage\x3a\s*(\w{1,36}\s*(\x2e|\x2d|\x3b|\x3d|\x2c)\s*)*[^\x2d\x3b\x2c\x3d\n]{37}/smi
+/USING\s*((\x27[^\x27]{1000,})|(\x22[^\x22]{1000,}))/Rmsi
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xB5/
+/.{3}\xFFSMB\x32/
+/^(\d{5,}|390[1-9]|39[1-9][0-9]|[4-9][0-9]{3})\x3A/R
+/^\x2f[^\x2f]{256}/
+/.{15}\x00\x01\x86\xA5.{4}\x00\x00\x00\x05/
+/^[A-Z]+\s+sip\x3A[^\r\n\x40]+\x40{2}/smi
+/.{84}.*\\[wW][iI][nN][rR][eE][gG]\x00/
+/.{15}\x00\x01\x86\xA5.{4}\x00\x00\x00\x04/
+/.{8}.*\x00.*.{0}.*\x00.*.{0}.*\x00/
+/\x3C[^\s]+\s[^\x3c\x3E]{80}/si
+/\x00\x01[^\x00]{100}/
+/[uU][iI][dD][lL].{1}.*-/
+/\S{190}.rt/Usmi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA1/
+/.{0,1}[sS][eE][aA][rR][cC][hH] /
+/.*[rR][mM][dD] [^\x0a]{100}/
+/<EMBED(\s+|\s+[^>]*?\s+)src\s*=\s*(\x22[^\x22]{2082,}\x22|\x27[^\x27]{2082,}\x27|[^\r\n\s]{2082,})/smi
+/\sLOGIN\s[^\n]{100}/smi
+/^Location\s*\x3a\s*\w+\x3a\/\/([^\n]*\x3a)?[^\n]{128}/smi
+/^LIST\s[^\n]{10}/smi
+/\(\s*((\x27[^\x27]*\x27|\x22[^\x22]*\x22)\s*,\s*){3}(\x27[^\x27]*\.\.[\x5c\x2f]|\x22[^\x22]*\.\.[\x5c\x2f])/si
+/.*[sS][tT][aA][tT].{1}.*\?/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x04/
+/\sAP[A-Za-z]{4}\s[^\n]{256}/smi
+/^\x01.{23}(\x25|\x26)/smi
+/.{24}.{0,17}\x4e\x41\x4d\x45\x4e\x41\x4d\x45/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x05/
+/.*[mM][kK][dD] [^\x0a]{100}/
+/.{15}\x00\x01\x86\xA5.{4}\x00\x00\x00\x03/
+/^FOLD\s[^\n]{256}/smi
+/^SITE\s+CHOWN\s[^\n]{100}/smi
+/^MOVE[^s]{432}/sm
+/^DELETE[^s]{432}/sm
+/\xff{8}\x09\x08[\x08\x10]\x00\x00[\x05\x06]\x00\x01/sm
+/(\x3c[a-zA-Z\x5f][a-zA-Z0-9\x5f]*[^\x3e]*[^\x2f]\x3e){50,}/
+/^.{4}/R
+/^.{27}/R
+/.{11}\x00\x05\xF7\x68.{4}\x00\x00\x00\x0D/
+/username=[^&\x3b\r\n]{250}/smi
+/.*\x00.{33}.*\x00.*.{0}.*\x00/
+/^DESCRIBE\s[^\n]{300}/smi
+/\x2fnds\x2f[^&\r\n\x3b]{500}/smi
+/.*[sS][tT][aA][tT].{1}.*\*/
+/^\x01.{23}(\x25|\x26).{15}(\x0A|\x34)/smi
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x02/
+/.{0,13}\x05\x00\x3E/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\x8B/
+/^answer\x00{6}NetControl\x2EServer\s+\d+\x2E\d+\s+\x22The\s+UNSEEN\x22\s+Project/smi
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xF7/
+/.{0}\x05.{1}\x0b.{29}\xB8\x4A\x9F\x4D\x1C\x7D\xCF\x11\x86\x1E\x00\x20\xAF\x6E\x7C\x57/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x01/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\x7D/
+/^.{68}(\x00\x00\x00\x00|.{12})/sR
+/.*conf=.*.{0}.*\.\.\//
+/^User-Agent\x3a[^\n]{216}/smi
+/crypto\x3Arc4_(encrypt|decrypt)\x28\x27[^\x27]{129}/smi
+/.*[rR][cC][pP][tT] [tT][oO]:.*.{0}.*\|.*.{0}.*sed /
+/^Authorization\x3a(\s*|\s*\r?\n\s+)Basic\s[^\n]{250}/smi
+/.* LOGIN .*.{0}.* \{/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xB8/
+/ETRN [^\x0A]{500}/
+/.*Content-Transfer-Encoding:[^\x0a]{100}/
+/(EAL|EAR|ETT)\s*-0{0,4}1/i
+/.{199}\xFF\xF6\xFF\xF6\xFF\xFB\x08\xFF\xF6/
+/^Authorization\x3a(\s*|\s*\r?\n\s+)Basic\s[^\n]{512}/smi
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\x03/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xB1/
+/.{0,3}Invalid login/
+/^GET [^\r\n]*\x3F([^\r\n]*\x26)*[^\x3D\r\n]{1025,}/Osmi
+/(\x02([\x01\x02\x03]|\xFF\xFF)){100,}/RBsm
+/\x3ctime\x20[^\x3e]*(begin|end)\x3d\x22[^\x22]{13}/smi
+/\x28\s*\x22\s*\x25([2-9][6-9][5-9]|[1-9][0-9]{3,})f/mi
+/.{31}.*[xX]\x00[pP]\x00_\x00[uU]\x00[pP]\x00[dD]\x00[aA]\x00[tT]\x00[eE]\x00[cC]\x00[oO]\x00[lL]\x00[vV]\x00[bB]\x00[mM]\x00/
+/.{31}.*[xX]\x00[pP]\x00_\x00[sS]\x00[hH]\x00[oO]\x00[wW]\x00[cC]\x00[oO]\x00[lL]\x00[vV]\x00/
+/^AUTH\s[^\n]{50}/smi
+/\sFETCH\s[^\n]{256}/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xB5/
+/Remote-Party-ID\x3A\scsip\x3A[^@]+@\d{1,3}\x2E\d{1,3}\x2E\xD1/smi
+/^AUTH\s+\S+\s+[^\n]{128}/mi
+/.{15}\x00\x01\x86\xB8.{4}\x00\x00\x00\x02/
+/.{3}\xFFSMB\xa2/
+/^[A-Z]+\s+sip\x3A[^\r\n\x40]{256}/smi
+/\x2Fezsb\d{4}\x2Fbar_pl\x2Fchk_bar\.fcgi/Ui
+/.{15}\x00\x01\x86\xE4.{4}\x00\x00\x00\x06/
+/.*show=.{1}.*\.\.\/\.\./
+/({(?=\d+}[^\n]*?\sAUTH)|AUTH\s[^\n]*?{(?=\d+}))/smi
+/.* BODY\.PEEK\[[^\]]{1024}/
+/^Content-Disposition\x3a(\s*|\s*\r?\n\s+)[^\r\n]*\{[\da-fA-F]{8}(-[\da-fA-F]{4}){3}-[\da-fA-F]{12}\}/smi
+/[dD][eE][lL][eE].{1}.*-/
+/TIME_ZONE\s*=\s*((\x27[^\x27]{1000,})|(\x22[^\x22]{1000,}))/msi
+/.*[cC][mM][dD] [^\x0a]{100}/
+/\x2Fbi\x2Fservlet\x2FThinstall(Pre|Result).*(\r|\n)User-Agent\x3A[^\r\n]*\.exe[^\r\n]*\x7B[\dA-Za-z]{8}-[\dA-Za-z]{4}-[\dA-Za-z]{4}-[\dA-Za-z]{4}-[\dA-Za-z]{12}\x7D\x7C[\dA-Za-z]{8}\x7C\d{5}-\d{3}-\d{7}-\d{5}/smi
+/.{11}\x00\x01\x86\xA0\x00.{3}\x00\x00\x00\x05/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x05\xF7\x68/
+/.{7}\xFF\xFF\xFF\xFF\x00\x00/
+/^RSET\s[^\n]{10}/smi
+/.*\.\.\/\.\.\/.{1}.*%00/
+/.{31}[sS]\x00[pP]\x00_\x00[aA]\x00[dD]\x00[dD]\x00[uU]\x00[sS]\x00[eE]\x00[rR]\x00/
+/\x2Fezsb\d{4}\x2Fbar_pl\x2Ffav\.fcgi/Ui
+/.{11}\x00\x01\x86\xAB.{4}\x00\x00\x00\x01/
+/^(\x03|[\x14-t]).{19}(\x25|\x26)/smi
+/.* LOGIN [^\x0a]{100}/
+/.{15}\x00\x01\x86\xA5.{4}\x00\x00\x00\x06/
+/^SITE\s+CPWD\s[^\n]{100}/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xB8/
+/.{15}\x00\x01\x86\xB8.{4}\x00\x00\x00\x01/
+/\sAUTHENTICATE\s[^\n]{100}/smi
+/^PWD\s.{190}/smi
+/^From\x3A\s+[^\r\n]{256}/smi
+/.{31}.*[xX]\x00[pP]\x00_\x00[sS]\x00[pP]\x00[rR]\x00[iI]\x00[nN]\x00[tT]\x00[fF]\x00/
+/.{15}\x00\x01\x86\xA4.{4}\x00\x00\x00\x0B/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x03\x0D\x70/
+/.*[sS][iI][tT][eE].*.{0}.*[eE][xX][eE][cC] .{1}.*%.{1}.*%/
+/.*LIST.{1}.*\.\..{1}.*\.\./
+/SoftCart.exe\?[^\s]{100}/Usmi
+/cache_lastpostdate\[[^\]]+\]=[^\x00\x3B\x3D]{30}/smi
+/.*[dD][eE][lL][eE] [^\x0a]{100}/
+/^Accept-Language\x3A[^\n]{100}/smi
+/.*[cC][aA][pP][aA][^\x0a]{10}/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xB1/
+/.*[aA][pP][oO][pP][^\x0a]{256}/
+/^Authorization\x3a\s*Negotiate\s*((YE4G.{40}LgMc)|(YIIQ.{40}QUFB))/smi
+/.*[aA][uU][tT][hH][oO][rR][iI][zZ][aA][tT][iI][oO][nN]: [bB][aA][sS][iI][cC] [^\x0A]{512}/
+/php.*\x3f[^\n]{256}/smi
+/^rmgroup\x3a[^\n]{32}/smi
+/\x2B\x2D{3}\x7C[^\r\n]*\x7C\x2D{3}\x2B/smi
+/.*uid=.{0}.{0,10} gid=/
+/^PASS\s+[^\n]{100}/smi
+/\sDELETE\s[^\n]{100}/smi
+/.{31}[xX]\x00[pP]\x00_\x00[rR]\x00[eE]\x00[gG]\x00/
+/^(\x00\x00\x00\x00|.{12})/sR
+/.{4}.{0,8}\x04\x00/
+/AUTH\s[^\n]{100}/smi
+/^m=[A-Z]{1,20}\s(\d{6,}|[7-9]\d{5,}|6[6-9]\d{3,}|65[6-9]\d{2,}|655[4-9]\d+|6553[6-9])/smi
+/tid\x3D\x7B([0-9A-z]+\x2D){4}[0-9A-z]+\x7D/smi
+/.{10}<willnevermatch>/
+/\(\s*TIMESTAMP\s*(\s*(\x27[^\x27]+'|\x22[^\x22]+\x22)\s*,)\s*((\x27[^\x27]{1000,})|(\x22[^\x22]{1000,}))/Rmsi
+/\sSELECT\s[^\n]{100}/smi
+/.*[sS][tT][aA][tT][^\x0a]{10}/
+/^TOP\s[^\n]{50}/smi
+/\sCAPABILITY\s[^\n]{100}/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xAB/
+/^version\x3a[^\n]{21}/smi
+/^checkgroups\x3a[^\n]{21}/smi
+/\x80\x02.{4}.*\x02/
+/^senduuname\x3a[^\n]{21}/smi
+/^MODE\s+[^ABSC]{1}/msi
+/^.{4}/sR
+/^.{5}([^\x03\x04]|.[^\x00]+\x00\x00[^\x03\x04])/Rs
+/.{3}\xFFSMB\x75/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\x88/
+/^MKCOL[^s]{432}/sm
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xBA/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\xcc/
+/.{84}.*\\\x00[wW]\x00[iI]\x00[nN]\x00[rR]\x00[eE]\x00[gG]\x00/
+/.{13}.*\x00\x00\xFC/
+/.*[sS][tT][aA][tT] [^\x0a]{100}/
+/^TEST\s+[^\n]{100,}/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xF7/
+/pwd=(\!|\%21)CRYPT(\!|\%21)[A-Z0-9]{512}/i
+/.{15}\x00\x01\x86\xA9.{4}\x00\x00\x00\x01/
+/\(\s*(\x27[^\x27]{1075,}|\x22[^\x22]{1075,})/si
+/\s{230,}.htr/U
+/<sips?[^\x3A]{6}/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xAF/
+/.{11}.*\x04[bB][iI][nN][dD]/
+/.{3}\xFF[sS][mM][bB]\x25.{56}\x26\x00.{5}\x5c\x00[pP]\x00[iI]\x00[pP]\x00[eE]\x00\x5c\x00.{2}\x05.{1}\x0b.{21}\x00/
+/.{15}\x00\x01\x86\xBC.{4}\x00\x00\x00\x01.{4}.*\|/
+/.{11}\x00\x01\x86\xE4.{4}\x00\x00\x00\x15/
+/^(\x03|[\x14-t]).{19}(\x25|\x26).{15}(\x0A|\x34)/smi
+/.{11}.*\x07[vV][eE][rR][sS][iI][oO][nN]/
+/.{1}.*[aA][dD][mM][iI][nN]\.[dD][lL][lL]/
+/.{1}.*[nN][cC]\.[eE][xX][eE]/
+/GET\s+\w[^\x0a\x20]{165}/i
+/^SSH-\s[^\n]{200}/ism
+/.{4}.{0,7}\x04\x01\x00/
+/.{29}6[iI][sS][sS] [eE][cC][nN][rR][aA] [bB][uU][iI][lL][tT]-[iI][nN] [pP][rR][oO][vV][iI][dD][eE][rR], [sS][tT][rR][oO][nN][gG] [eE][nN][cC][rR][yY][pP][tT][iI][oO][nN]/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xF3/
+/\sLSUB\s[^\n]{100}/smi
+/.* [fF][iI][nN][dD] [^\x0a]{1024}/
+/href\s*=\s*(\x22mhtml\x3A\x2F\x2F[A-Z\x2D]{2,31}\x3A[^\x22]{1253,}|\x27mhtml\x3A\x2F\x2F[A-Z\x2D]{2,31}\x3A[^\x27]{1253,}|mhtml\x3A\x2F\x2F[A-Z\x2D]{2,31}\x3A[^\x09\r\n\x20]{1253,})/smi
+/rbtool\x3d[^\x20\x26\x3b]{1}/U
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xBC/
+/(xmlns\x3A.*?){15}/
+/fn=Eye\d{4}_\d{2}.log/Rmsi
+/(0x)?[0-9a-f]+\s+\S{65}|(0x)?[0-9a-f]+\s+\S+\s+(0x[0-9a-f]+)|(0[0-8]+)|([1-9]\d*)\s+(0x)?[0-9a-f]+\s+\S{65}|(0x)?[0-9a-f]+\s+\S+\s+(0x[0-9a-f]+)|(0[0-8]+)|([1-9]\d*)\s+(0x)?[0-9a-f]+\s+\S+\s+(0x[0-9a-f]+)|(0[0-8]+)|([1-9]\d*)\s+(0x)?[0-9a-f]+\s+\S{65}|(0x)?[0-9a-f]+\s+\S+\s+(0x[0-9a-f]+)|(0[0-8]+)|([1-9]\d*)\s+(0x)?[0-9a-f]+\s+\S+\s+(0x[0-9a-f]+)|(0[0-8]+)|([1-9]\d*)\s+(0x)?[0-9a-f]+\s+\S+\s+(0x[0-9a-f]+)|(0[0-8]+)|([1-9]\d*)\s+(0x)?[0-9a-f]+\s+\S{65}/Ri
+/.{1}.*phpbb_root_path=/
+/.{11}\x00\x01\x86\xB8.{4}\x00\x00\x00\x02/
+/unescape\s*\x28(\x22|\x27|\x26quot\x3B|\x5c\x22)[\x25\x5c]u[0-9a-f]{4}(\x22\s*\x2B\s*\x22)?[\x25\x5c]u[0-9a-f]{4}/smi
+/.{11}\x00\x01\x86\xB8.{4}\x00\x00\x00\x01/
+/.* RENAME \x22.*.{0}.*\x22 \{/
+/.{11}\x00\x01\x86\xA4.{4}\x00\x00\x00\x0B/
+/\x2FCSuserCGI\x2Eexe\x3FLogout\x2B[^\s]{96}/Ui
+/^PRIVMSG\s+[^\s]+\s+\x3a\s*\x01SENDLINK\x7c[^\x7c]{69}/smi
+/[\x05|\x06|\x07]\x00.{6}[SS|DS]/R
+/sid=[^&\x3b\r\n]{255}/si
+/.{1}\x00\x00/
+/.{11}\x00\x01\x87\x99.{4}\x00\x00\x01\x01/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xAB/
+/^CONNECT\s[^\s]{1024}/i
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xBC/
+/Authorization\s*\x3A\s*Basic\s*[^\n]{437}/smi
+/.{1}.*[pP][aA][sS][sS][wW][dD]/
+/^a=[^\r\n]{256}/smi
+/[\x01|\x02|\x03|\x04|\x05|\x06|\x07]\x00.{4}\x43\x00/R
+/.*cvs server: cannot find module.{1}.*error/
+/TO_CHAR\s*\(\s*SYSTIMESTAMP\s*,\s*(\x27[^\x27]{256}|\x22[^\x22]{256})/smi
+/.*[cC][oO][oO][kK][iI][eE].*.{0}.*philboard_admin=True/
+/^LOCK[^s]{432}/sm
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xBA/
+/^\x2F40e800[0-9A-F]{30,}$/Ui
+/.{31}.*[xX]\x00[pP]\x00_\x00[pP]\x00[rR]\x00[iI]\x00[nN]\x00[tT]\x00[sS]\x00[tT]\x00[aA]\x00[tT]\x00[eE]\x00[mM]\x00[eE]\x00[nN]\x00[tT]\x00[sS]\x00/
+/^Accept\x2dCharset\x3a\s*([^\x3b\x3d\x2c]{1,36}\s*(\x2d|\x3b|\x3d|\x2c)\s*)*[^\x2d\x3b\x2c\x3d\n]{37}/smi
+/=\x22http\x3a\x2f\x2f[^\x3a\x2f@\s\x22\x3F\x26]{255}|=\x27http\x3a\x2f\x2f[^\x3a\x2f@\s\x27\x3F\x26]{255}|=http\x3a\x2f\x2f[^\x3a\x2f@\s\x3F\x26]{255}/i
+/\x2Fezsb\d{4}\x2Fbar_pl\x2Fchk\.fcgi/Ui
+/^ihave\x3a[^\n]{21}/smi
+/.* [rR][eE][nN][aA][mM][eE] [^\x0a]{1024}/
+/^[0-9]{1,5}\x00/
+/get-dated-rev\x20\x28\x20\d{1,4}\x3a([^T\x2d\x3a]{9}|[^\x2d]{4}\x2d[^\x2d]{3}|[^\x2d]{4}\x2d[^\x2d]{2}\x2d[^\x2d]{3})/i
+/wqPassword=[^\r\n\x26]{294}/i
+/.{31}.*[rR]\x00[aA]\x00[iI]\x00[sS]\x00[eE]\x00[rR]\x00[rR]\x00[oO]\x00[rR]\x00/
+/^POST [^\r\n]*\x3F([^\r\n]*\x26)*[^\x3D\r\n]{1025,}/smi
+/.{31}.*[xX]\x00[pP]\x00_\x00[dD]\x00[iI]\x00[sS]\x00[pP]\x00[lL]\x00[aA]\x00[yY]\x00[pP]\x00[aA]\x00[rR]\x00[aA]\x00[mM]\x00[sS]\x00[tT]\x00[mM]\x00[tT]\x00/
+/^\s*\x22[^\x22\n]{300}/mi
+/^sendsys\x3a[^\n]{21}/smi
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\x99/
+/\d\d\.[^\s\n\r]{40}/Rsmi
+/^Host\x3A\s[^\r\n]{300,}/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\x03/
+/\/OvCgi\/[^\.]*\.exe[^\x20]{2000,}/
+/.{15}\x00\x01\x86\xA0\x00.{3}\x00\x00\x00\x05/
+/.*\x0d[lL][oO][cC][aA][tT][iI][oO][nN]\x3a[^\x0a]{128}/
+/.{0,16}\x57\x68\x61\x74\x73\x55\x70\x20\x2d\x20\x41\x20\x4e\x65\x74\x77/
+/^Content-Length\x3A\s*[^\r\n]{100,}/smi
+/(0x[0-9a-f]+|0[0-8]+|[1-9]\d*)\s+\S{157}|(0x[0-9a-f]+|0[0-8]+|[1-9]\d*)\s+\S+\s+\S{125}|(0x[0-9a-f]+|0[0-8]+|[1-9]\d*)\s+\S+\s+\S+\s+\S{1025}|(0x[ 0-9a-f]+|0[0-8]+|[1-9]\d*)\s+\S+\s+\S+\s+\S+\s+\S{117}|(0x[0-9a-f]+|0[0-8]+|[1-9]\d*)\s+\S+\s+\S+\s+\S+\s+\S+\s+\S{37}/i
+/.{0,13}\x43\x69\x6e\x63\x6f\x20\x4e\x65\x74\x77\x6f\x72\x6b\x2c\x20\x49\x6e\x63\x2e/
+/.{15}\x00\x04\x93\xF3.{4}\x00\x00\x00\x09/
+/(name|id|number|total|boundary)=\s*[^\r\n\x3b\s\x2c]{300}/smi
+/.{15}\x00\x04\x93\xF3.{4}\x00\x00\x00\x08/
+/^Subject\x3a[^\r\n]*\d{5,6}\x5f[123]?\d\x2El/smi
+/^[^\x29]*\x2E[0-9]{11}/R
+/[\x05-t][bcdfghjklmnpqrstvwxyz]{5,32}\x02cn/i
+/<tel[^\x3A]{6}/smi
+/^HELP\s[^\n]{500}/ism
+/.{3}.*\x02\x01\x00\x04\x82\x01\x00/
+/HELO [^\x0a]{500}/
+/.*HTTP\/1\.1\x0aContent-type\x3a text\/xml\x0aHOST\x3a.{1}.*Accept\x3a \x2a\/\x2a\x0aTranslate\x3a f\x0aContent-length\x3a5276\x0a\x0a/
+/.*name=.*.{0}.*\.\.\/\.\.\//
+/.*[rR][mM][dD][iI][rR] [^\x0a]{100}/
+/.{15}\x00\x01\x86\xA5.{4}\x00\x00\x00\x01/
+/\x3C[^\x3E\x0a]{500}/Ri
+/^ETRN\s[^\n]{500}/smi
+/.*[uU][sS][eE][rR] [^\x0a]{100}/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xE4/
+/pitrig_dropmetadata\x28[^\x29]{520,}?/i
+/\sPARTIAL.*BODY\[[^\]]{1024}/smi
+/.*[cC][eE][lL] [^\x0a]{100}/
+/.{11}\x00\x01\x87\x88.{4}\x00\x00\x00\x01/
+/.*[rR][sS][eE][tT][^\x0a]{10}/
+/^.*HTTP.*\r\n(.+\x3a\s+.+\r\n){31,}/
+/.{15}\x00\x01\x87\x7D.*.{0}.*\/\.\.\//
+/j_(username|password)=[^\n|^&]{256,}/smi
+/^.{268}(\x00\x00\x00\x00|.{12})/sR
+/\x99{40}\xeb\x12\x01\x99{4}\x18A{5}.{4}A{6}/sm
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xAF/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA5/
+/<\w+\x3afill\s[^>]*method\s*=\s*(\x27[^\x27]{32}|\x22[^\x22]{32}|[^\s>]{32})/smi
+/^\s*SEND\s+[^\n]{246}/smi
+/.*[lL][iI][sS][tT][^\x0a]{50}/
+/SSH-[^\x0a]{600}/
+/propfind xmlns\x3A[^\x3D]*\x3d\x22[^\x22]{512,}/smi
+/^RNFR\s[^\n]{200}/smi
+/connectID=[^&\x3b\r\n]{255}/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x03\x0D\x70/
+/^INVITE\s[^\s\r\n]{60}/smi
+/^SITE\s+CHMOD\s[^\n]{200}/smi
+/.{15}\x00\x01\x86\xE4.{4}\x00\x00\x00\x15/
+/^Username\:[^\n]{100}/smi
+/.{11}\x00\x01\x86\xA9.{4}\x00\x00\x00\x01/
+/^\x21{3}Optix\s+Pro\s+v\d+\x2E\d+\s+Server\s+Online\x21{3}/smi
+/^\s*URL\s*=\s*mhtml\x3A\x2F\x2F[A-Z\x2D]{2,31}\x3A[^\r\n]{1253,}/smi
+/(\x5c[^\x5c]{16,}|\x2f[^\x2f]{16,})\.cda$/smi
+/select\s+xmlquery\s*\x28\s*(\x27|\x22)[^\x27\x22]{512}/smi
+/^LoadTestPassword\x3A[^\r\n]{1024,}/smi
+/^(NT|CallBack|SID|TimeOut)\s*\x3a\s*[^\n]{512}/Rsmi
+/instancename=[^&\x3b\r\n]{513}/smi
+/^Entry \/file\/[0-9.]{71,}\/\/.*\x0aannotate\x0a/smi
+/.{11}\x00\x04\x93\xF3.{4}\x00\x00\x00\x08/
+/\x01.{240}.*\x0C.*.{0}.*%.{1}.{0,7}%.{1}.{0,7}%/
+/\x2fnds[^\r\n]{1000}/Usmi
+/\r\n\w{200,}\x3a.*\r\n/
+/.*[pP][aA][sS][sS][^\x0a]{50}/
+/^Expires\x3A\s+\d{11}/smi
+/.*s_key=.*.{0}.*'.{1}.*'.*.{0}.*'/
+/^.{27}/sR
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\x8B/
+/\x2Fezsb\d{4}\x2Fbar_pl\x2Fb\.fcgi/Ui
+/.* [lL][iI][sS][tT] [^\x0a]{100}/
+/.{15}\x00\x04\x93\xF3.{4}\x00\x00\x00\x07/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA9/
+/.{3}\xFFSMB\x25/
+/.{4}\xe0\x00\x00\x00\x00\x00/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA8/
+/.{11}\x00\x04\x93\xF3.{4}\x00\x00\x00\x09/
+/NUMTO(DS|YM)INTERVAL\s*\(\s*\d+\s*,\s*((\x27[^\x27]{1000,})|(\x22[^\x22]{1000,}))/msi
+/^.{12}(\x00\x00\x00\x00|.{12})/sR
+/^.{12}\x00{6}\x09\x01.{16}.{300}/
+/.{11}\x00\x04\x93\xF3.{4}\x00\x00\x00\x07/
+/.{6} \x04\x82\x01\x00/
+/.{82}.*Login failed for user \x27sa\x27/
+/.*~.{1}.*\[/
+/^\s*Content-Type\s*\x3A\s*[^\r\n]{300}/mi
+/\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff.{2}\x00/
+/^[^\n]*[\x80-t].*\nAccept-Language\x3A\s*[\S]{32}/si
+/^STOU\s[^\n]{200}/smi
+/\sSTATUS[^\n]{100}/smi
+/.{0}\x05.{1}\x0b.{29}\xA0\x01\x00\x00\x00\x00\x00\x00\xC0\x00\x00\x00\x00\x00\x00\x46/
+/.{0,4}\x0A     /
+/^DESCRIPTION\x3A[^\n]{268}/smi
+/.* [aA][uU][tT][hH][eE][nN][tT][iI][cC][aA][tT][eE] [^\x0a]{100}/
+/^.{20}([\x01-t]|0x00[\x01-t]|\x00{2}[\x02-t]|\x00{2}\x01[\x15-t])/s
+/HTTP_COOKIE=[^\x0a\x0d\x26\x3f\x20]{250}/smi
+/Visio \x28TM\x29 Drawing\r\n\x00{4}([^\x00]|\x00[^\x00]|\x00\x00[^\x00]|\x00\x00\x00[^\x01-t\x0b])/smi
+/^\S{65}|\S+\s+\S{65}|\S+\s+\S+\s+\S{65}/Ri
+/\x3c\x21\x2d\x2d\x23include\s+file[^(\x2d\x2d\x3e)]{250,}/
+/.{31}.*[xX]\x00[pP]\x00_\x00[cC]\x00[mM]\x00[dD]\x00[sS]\x00[hH]\x00[eE]\x00[lL]\x00[lL]\x00/
+/.* [cC][pP][wW][dD] [^\x0a]{100}/
+/.{42}\x00\x00\x00\x00/
+/^PASS\s[^\n]{50}/smi
+/.{0,24}\x49\x53\x53\x50\x4e\x47\x52\x51/
+/.{0,5}[pP][cC][cC][sS][mM][yY][sS][qQ][lL][aA][dD][mM]\/[iI][nN][cC][sS]\/[dD][bB][cC][oO][nN][nN][eE][cC][tT]\.[iI][nN][cC]/
+/^CSeq\x3A\s*[^\nA-Za-z]*[A-Za-z][^\n]{16,}/smi
+/mfcisapicommand=[^&\r\n\x3b]{250}/smi
+/^SEARCH\s+[^\n]{1024}/smi
+/^\s*Content-Encoding\s*\x3A\s*[^\r\n]{300}/mi
+/^(\x01|\x02)[^\x00]+\x00[^\x00]{473}/Rs
+/^.{5}([^\x03\x04]|.[^\x00]+\x00[^\x03\x04])/Rs
+/(\(\s*(\x27[^\x27]{1075,}|\x22[^\x22]{1075,})|\(\s*(\x27[^\x27]*\x27|\x22[^\x22]+\x22)\s*,\s*(\x27[^\x27]{1075,}|\x22[^\x22]{1075,})|\(\s*((\x27[^\x27]*\x27|\x22[^\x22]+\x22)\s*,\s*){2}(\x27[^\x27]{1075,}|\x22[^\x22]{1075,}))/si
+/.{1}\x00\x01/
+/.* CREATE.*.{0}.* \{/
+/^HELO\s[^\n]{500}/smi
+/CONNECT_OPTIONS\x3D[^\x20\x0A\x0D\x00]{900}/smi
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA2/
+/.{15}\x00\x01\x86\xAB.{4}\x00\x00\x00\x01/
+/.*[tT][oO][pP][^\x0a]{10}/
+/.*'.*.{0}.*\x3b.{1}.*'/
+/^APOP\s+USER\s[^\n]{256}/smi
+/.{0,92}\x38\x39\x3a\x3b\x3c\x3d\x3e\x3f/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA3/
+/.{16}\x10\x05.{13}\x00\x00\x00\x01\x01\x00\x00\x18/
+/group meta[^\s\x00]{12}/smi
+/.{11}\x00\x01\x87\x88.{4}\x00\x00\x00\x00/
+/.* LSUB \x22.*.{0}.*\x22 \{/
+/^POST[^s]{432}/sm
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x04/
+/^\sFIND\s[^\n]{100}/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x05/
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA1/
+/^\x00.{3}\xFFSMB(\x73|\x74|\x75|\xa2|\x24|\x2d|\x2e|\x2f).{28}(\x73|\x74|\x75|\xa2|\x24|\x2d|\x2e|\x2f)/
+/\x05\x00\x00\x03\x10\x00\x00\x00.{16}\x0a[\x03\x04]/
+/.*FOLD [^\x0A]{256}/
+/.*[cC][wW][dD] [^\x0a]{100}/
+/^MAIL FROM\x3a\s+[\w\s@\.]{200,}\x3b[\w\s@\.]{200,}\x3b[\w\s@\.]{200,}/smi
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA5/
+/.*[uU][sS][eE][rR][^\x0a]{50}/
+/\sCREATE\s[^\n]{1024}/smi
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA4/
+/\sLIST\s[^\n]{100}/smi
+/.{15}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x05\xF7\x75/
+/^To\x3A\s+[^\r\n]{256}/smi
+/.{1}.*;/
+/(\(\s*(\x27[^\x27]*\x27|\x22[^\x22]+\x22)\s*,\s*(\x27[^\x27]{1075,}|\x22[^\x22]{1075,})|\(\s*(\x27[^\x27]{1075,}|\x22[^\x22]{1075,})|\(\s*((\x27[^\x27]*\x27|\x22[^\x22]+\x22)\s*,\s*){2}(\x27[^\x27]{1075,}|\x22[^\x22]{1075,}))/si
+/^.{12}(\x00|\x01)\x00\x00(\x70|\x71)/smi
+/^t=(\d{7,}|\d{1,6}\s\d{7,})/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x05\xF7\x75/
+/\sPARTIAL.*BODY\.PEEK\[[^\]]{1024}/smi
+/\x2Fezsb\d{4}\x2Fbar_pl\x2Fshdoclc\.fcgi/Ui
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA9/
+/.{15}\x00\x01\x87\x88.{4}\x00\x00\x00\x01/
+/^STAT\s[^\n]{10}/smi
+/^cancel\x3a[^\n]{32}/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA8/
+/.{31}.*[xX]\x00[pP]\x00_\x00[sS]\x00[eE]\x00[tT]\x00[sS]\x00[qQ]\x00[lL]\x00[sS]\x00[eE]\x00[cC]\x00[uU]\x00[rR]\x00[iI]\x00[tT]\x00[yY]\x00/
+/(\(\s*(\x27[^\x27]*\x27|\x22[^\x22]*\x22)\s*,\s*(\x27[^\x27]*\.\.[\x5c\x2f]|\x22[^\x22]*\.\.[\x5c\x2f])|\(\s*((\x27[^\x27]*\x27|\x22[^\x22]*\x22)\s*,\s*){3}(\x27[^\x27]*\.\.[\x5c\x2f]|\x22[^\x22]*\.\.[\x5c\x2f]))/si
+/.*[cC][wW][dD].{1}.*C:\\/
+/\x28\s*name\s*\x22[^\x22]{260,}/smi
+/.* [nN][eE][wW][eE][rR] [^\x0a]{100}/
+/^Via\x3A\s+SIP\x2F2\x2E0\x2F(TCP|UDP)\s+[^\x3B\r\n]{63}/smi
+/\(\s*(\x27[^\x27]{1024,}|\x22[^\x22]{1024,})/si
+/\x5B(OPTIONS|WINDOWS|MERGE FILES|MAP|ALIAS|TEXT\x20POPUPS|INFOTYPES|SUBSETS)\x5D.*(Contents|Index|Compiled|Sample List|Full text search stop list)\x20file\s*\x3D[^\r\n]{200,}/smi
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x02/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x05\xF7\x68/
+/^TRACE[^s]{432}/sm
+/.{0,1}GET x HTTP\/1\.0/
+/.{15}\x00\x01\x87\x88.{4}\x00\x00\x00\x00/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\xcc/
+/.* BODY\[[^\]]{1024}/
+/.{9}1/
+/.*userfile_name=.{1}.*\.php/
+/^SEND FROM\x3a\s+[\w\s@\.]{200,}\x3b[\w\s@\.]{200,}\x3b[\w\s@\.]{200,}/smi
+/\s{23}DIMBUS\s+Server\s+v\d+\x2E\d+/smi
+/.{15}\x00\x01\x86\xB8.{4}\x00\x00\x00\x02.{0,251}%x %x/
+/[\x05-t][bcdfghjklmnpqrstvwxyz]{5,32}\x02ru/i
+/.{0}\x05.{1}\x0b.{21}\x00/
+/^[^\x3e\x3f\x26]{50}/R
+/^VRFY[^\n]{255,}/smi
+/.*Microsoft Windows.*.{0}.*\(C\) Copyright 1985-.*.{0}.*Microsoft Corp\./
+/^\s*SAML\s+[^\n]{246}/smi
+/rbtool\x3d[^\x20\x26\x3b]{1}/P
+/.{31}.*[xX]\x00[pP]\x00_\x00[pP]\x00[rR]\x00[oO]\x00[xX]\x00[iI]\x00[eE]\x00[dD]\x00[mM]\x00[eE]\x00[tT]\x00[aA]\x00[dD]\x00[aA]\x00[tT]\x00[aA]\x00/
+/^\w+\s+UNSUBSCRIBE\s[^\n]{100}/smi
+/.{11}\x00\x01\x86\xA5.{4}\x00\x00\x00\x06/
+/SSH-0*([2-9]\d*|1\d+)\.[^-]*-[^\n]*\n\x00\x00.{3}\x14.{1000}/s
+/.{11}\x00\x01\x86\xA5.{4}\x00\x00\x00\x05/
+/.{0,8}VERSION\x0A/
+/w3who.dll\x3F[^\r\n]{519}/i
+/.{11}\x00\x01\x86\xA5.{4}\x00\x00\x00\x04/
+/^\s*SOML\s+[^\n]{246}/smi
+/.* CREATE [^\x0a]{1024}/
+/^\s*Content-Transfer-Encoding\s*\x3A\s*[^\n]{100}/mi
+/[aA][uU][tT][hH][iI][nN][fF][oO] [uU][sS][eE][rR] [^\x0a]{500}/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA4/
+/200 [^\x0a]{64}/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xE4/
+/^SITE\s+NEWER\s[^\n]{100}/smi
+/.{59}\x00\x14/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA3/
+/.{11}\x00\x01\x86\xA2.{4}\x00\x00\x00\x02/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x87\x7D/
+/.* [aA][uU][tT][hH][eE][nN][tT][iI][cC][aA][tT][eE] .*.{0}.*\{/
+/.{11}\x00\x01\x86\xA0.{4}\x00\x00\x00\x03\x00\x01\x86\xA2/
+/^SAML FROM\x3a\s+[\w\s@\.]{200,}\x3b[\w\s@\.]{200,}\x3b[\w\s@\.]{200,}/smi
+/^.{4}(\x00\x00\x00\x00|.{12})/sR
+/.{3}\x00\x00\x00\x00/
+/.{0,16}\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa/
+/^Authorization\x3a\s*Basic[^\n]{256}/mi
+/.*`.{1}.*`/
+/.{11}\x00\x01\x86\xA5.{4}\x00\x00\x00\x01/
+/.{15}\x00\x03\x0D\x70.{4}\x00\x00\x00\x01/
+/x-unix-mode\s*\x3D\s*(?(?=\d{4})[0-7]([1357][0-7]{2}|[0-7][1357][0-7]|[0-7]{2}[1357])|([1357][0-7]{2}|[0-7][1357][0-7]|[0-7]{2}[1357]))/smi
+/CREATE\s.*?FILE\s+((AS|MEMBER|TO)\s+)?(\x27[^\x27]{512}|\x22[^\x22]{512})/smi
+/SET_(SENDFROM|MAILHOST)\x28\x27[^\x27]{256}/i
+/^EXPN[^\n]{255,}/smi
+/^USER\s[^\n]{50,}/smi
+/.*[rR][eE][sS][tT] [^\x0a]{100}/
+/^t=(-|\d{1,6}\s-)/smi
+/^v=(-|(\d{6,}|[7-9]\d{5,}|6[6-9]\d{3,}|65[6-9]\d{2,}|655[4-9]\d+|6553[6-9]))/smi
+/.{11}\x00\x01\x86\xA5.{4}\x00\x00\x00\x03/
+/^HEAD[^s]{432}/sm
+/.{15}\x00\x01\x87\x99.{4}\x00\x00\x01\x01/
+/.{11}\x00\x01\x86\xA5.{4}\x00\x00\x00\x02/
+/username=[^&\x3b\r\n]{255}/si
+/^.{20}(\x00\x00\x00\x00|.{12})/sR
