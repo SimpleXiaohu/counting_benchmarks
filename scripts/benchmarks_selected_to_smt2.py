@@ -17,12 +17,12 @@ class smt2Translator(RunnerInterface):
     self.nested_above = os.path.join(self.outdir, "nested", "above")
     self.nested_between = os.path.join(self.outdir, "nested", "between")
     self.nested_tobig = os.path.join(self.outdir, "nested", "toobig")
-    os.makedirs(self.non_nested_above, exist_ok=True)
-    os.makedirs(self.non_nested_between, exist_ok=True)
-    os.makedirs(self.non_nested_tobig, exist_ok=True)
-    os.makedirs(self.nested_above, exist_ok=True)
-    os.makedirs(self.nested_between, exist_ok=True)
-    os.makedirs(self.nested_tobig, exist_ok=True)
+    # os.makedirs(self.non_nested_above, exist_ok=True)
+    # os.makedirs(self.non_nested_between, exist_ok=True)
+    # os.makedirs(self.non_nested_tobig, exist_ok=True)
+    # os.makedirs(self.nested_above, exist_ok=True)
+    # os.makedirs(self.nested_between, exist_ok=True)
+    # os.makedirs(self.nested_tobig, exist_ok=True)
 
 
   def run_single_instance(self, filename: str):

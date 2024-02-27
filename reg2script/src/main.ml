@@ -21,34 +21,19 @@ let teststr s f =
   (assert (" ^ f ^ " x y))\n\
   (check-sat)"
 
-let genCountSMTBigLen s =
+let genCountSMT s lenbound =
   "(declare-const X String)\n\
   (assert (str.in_re X " ^ s ^ "))\n\
-  (assert (< 100 (str.len X)))\n\
+  (assert (< "^lenbound^" (str.len X)))\n\
   (check-sat)\n\
   (get-model)"
 
-let genCountSMTSmallLen s =
-  "(declare-const X String)\n\
-  (assert (str.in_re X " ^ s ^ "))\n\
-  (assert (< 20 (str.len X)))\n\
-  (check-sat)\n\
-  (get-model)"
-
-let genCountSMTBigLenWithInter s =
+let genCountSMTWithInter s lenbound =
   "(declare-const X String)\n\
     (assert (str.in_re X " ^ s ^ "))\n\
     ; sanitize danger characters:  < > \' \" &\n\
     (assert (not (str.in_re X (re.++ re.all (re.union (str.to_re \"\\u{3c}\") (str.to_re \"\\u{3e}\") (str.to_re \"\\u{27}\") (str.to_re \"\\u{22}\") (str.to_re \"\\u{26}\")) re.all))))\n\
-    (assert (< 50 (str.len X)))\n\
-    (check-sat)\n\
-    (get-model)"
-let genCountSMTSmallLenWithInter s =
-  "(declare-const X String)\n\
-    (assert (str.in_re X " ^ s ^ "))\n\
-    ; sanitize danger characters:  < > \' \" &\n\
-    (assert (not (str.in_re X (re.++ re.all (re.union (str.to_re \"\\u{3c}\") (str.to_re \"\\u{3e}\") (str.to_re \"\\u{27}\") (str.to_re \"\\u{22}\") (str.to_re \"\\u{26}\")) re.all))))\n\
-    (assert (< 10 (str.len X)))\n\
+    (assert (< "^lenbound^" (str.len X)))\n\
     (check-sat)\n\
     (get-model)"
 
@@ -65,16 +50,19 @@ let usage_msg =
    transform regexes in stdin: ./reg2smt -s <regex>\n"
 
 let inputfile = ref ""
-let outputsubdir = ref "test"
+let outdir = ref "test"
 let inter = ref true
 let singleReg = ref ""
+
+let lenbound = ref "0"
 
 let speclist =
   [
     ( "-o",
-      Arg.Set_string outputsubdir,
+      Arg.Set_string outdir,
       "The subdirectory used to store the output files" );
     ("-inter", Arg.Set inter, "Extact intersection regexes");
+    ("-lenbound", Arg.Set_string lenbound, "The length bound of the string");
     ("-s", Arg.Set_string singleReg, "Transform a single regex");
   ]
 
@@ -82,9 +70,6 @@ let anon_fun filename = inputfile := filename
 let () = Arg.parse speclist anon_fun usage_msg
 
 (* make output subdirectory *)
-let outputdir = !outputsubdir
-;;
-
 let rec mkdir_rec path =
   match Sys.file_exists path with
   | true -> ()
@@ -93,29 +78,20 @@ let rec mkdir_rec path =
     mkdir_rec parent;
     Sys.mkdir path 0o777;;
 
-mkdir_rec outputdir 
+mkdir_rec !outdir 
 
 (* generate smt2 benchmarks *)
-let genCountSMT s =
-  if contains !outputsubdir "large" then genCountSMTBigLen s
-  else genCountSMTSmallLen s
-
-let genCountSMTWithInter s =
-  if contains !outputsubdir "large" then genCountSMTBigLenWithInter s
-  else genCountSMTSmallLenWithInter s
-  (* genCountSMTSmallLenWithInter s *)
-
-let genSMT s = if !inter then genCountSMTWithInter s else genCountSMT s
+let genSMT s lenbound = if !inter then genCountSMTWithInter s lenbound  else genCountSMT s lenbound
 
 let outputSingleofTest line n =
   try
     let lexbuf = Lexing.from_string (line ^ "\n") in
     let at = Regex.regex Regexlex.lexer lexbuf in
     let outf =
-      open_out (concat outputdir "instance" ^ string_of_int n ^ ".smt2")
+      open_out (concat !outdir "instance" ^ string_of_int n ^ ".smt2")
     in
     output_string outf (";test regex " ^ line ^ "\n");
-    output_string outf (genSMT (fst (trantoPT 1 at)));
+    output_string outf (genSMT (fst (trantoPT 1 at)) !lenbound);
     close_out outf
   with _ -> print_string (line ^ ":error\n")
 
@@ -148,7 +124,9 @@ let executeRegex f =
     let ic = open_in f in
     process_a_line 1 ic f 1;
     print_string "----translation done----\n"
-  with e -> raise e
+  with | End_of_file ->  print_string "----translation done----\n"
+       | e -> raise e
+
 
 let executeStdout s = outputSingleof s
 let comment1 = "----------------------------------------------------\n"
