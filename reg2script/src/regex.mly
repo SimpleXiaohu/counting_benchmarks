@@ -132,6 +132,7 @@ regexi :
    | regexi Lplus			         {Kplus $1}
    | regexi Llplus			         {LKplus $1}
    | regexi LlParen Latom Lcomma Latom LrParen   {Lloop ($1, (int_of_string $3), (int_of_string $5))}
+   | regexi LlParen Latom LrParen   {Lloop ($1, (int_of_string $3), (int_of_string $3))}
    | regexi LlParen Latom Lcomma Latom Loptloop
 						 {Llloop ($1, (int_of_string $3), (int_of_string $5))}                            
   //  | regexi LlParen Latom Lcomma LrParen	 {Lloop ($1, 0, (int_of_string $3))}
