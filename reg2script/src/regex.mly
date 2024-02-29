@@ -117,6 +117,7 @@ regexi :
      symbol				{$1}
    | Llalt ranges Lralt            	{processRange $2}  
    | regexi Lalt regexi            	{Alt ($1,$3)}
+   | Llparen Lrparen              {Capture (Atom EmptyW)}
    | Llparen regexi Lalt Lrparen	{Capture (Alt (Concat (Atom EmptyW, $2), Atom EmptyW))}
    | Llparen Lalt regexi Lrparen	{Capture (Alt (Atom EmptyW, Concat (Atom EmptyW, $3)))}
    | Llparen Loption Lcolon regexi Lalt Lrparen    {Alt (Concat (Atom EmptyW, $4), Atom EmptyW)}
@@ -227,6 +228,8 @@ rsymbol:
    | Lrparen			 {Atom (Slit ")")}
    | Lcaret			 {Atom (Slit "^")}
    | Ldoller			 {Atom (Slit "$")}
+   | LlParen     {Atom (Slit "{")}
+   | LrParen     {Atom (Slit "}")}
 
 range:
    | Latom Lrange Latom  {Atom (Srange ($1,$3))}
