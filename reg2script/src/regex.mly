@@ -175,14 +175,16 @@ symbol:
                                        (Sneg (Slit "\\u{0c}"))))))))))))}
 				       
    | Ldigit			 {Atom (Srange ("0", "9"))}
-   | Lndigit			 {Atom (Sneg (Srange ("0","9")))}
+   | Lndigit		 {Atom (Sneg (Srange ("0","9")))}
    | Ldot 			 {Atom Wild}
-   | Lexc			 {Atom (Slit "!")}
+   | Lexc			   {Atom (Slit "!")}
    | Lequal			 {Atom (Slit "=")}
    | Lcolon			 {Atom (Slit ":")}
    | Lcomma			 {Atom (Slit ",")}
    | LlParen     {Atom (Slit "{")}
    | LrParen     {Atom (Slit "}")}
+   | Llalt       {Atom (Slit "[")}
+   | Lralt       {Atom (Slit "]")}
 
 rsymbol:
      Latom                       {Atom (Slit $1)}
