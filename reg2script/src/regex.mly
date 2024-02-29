@@ -87,9 +87,8 @@ exception Unsupport of string ;;
 %left Lalt
 %nonassoc Lcaret
 %nonassoc Ldoller
-%nonassoc Lcomma
 %left CONCAT
-%nonassoc Latom
+%nonassoc Lcomma
 %nonassoc Lword Lnword
 %nonassoc Lspace Lnonspace
 %left Lstar Llstar Lplus Llplus Lbackref
@@ -101,6 +100,7 @@ exception Unsupport of string ;;
 %left Lexc
 %left Lequal Lcolon
 %left LlParen LrParen Loptloop
+%nonassoc Latom
 %left Lrange
 
 
@@ -180,6 +180,8 @@ symbol:
    | Lequal			 {Atom (Slit "=")}
    | Lcolon			 {Atom (Slit ":")}
    | Lcomma			 {Atom (Slit ",")}
+   | LlParen     {Atom (Slit "{")}
+   | LrParen     {Atom (Slit "}")}
 
 rsymbol:
      Latom                       {Atom (Slit $1)}

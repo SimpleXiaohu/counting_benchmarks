@@ -19,7 +19,6 @@ class smt2Translator(RunnerInterface):
     benchname = filename_split[0]
     outdir = os.path.join(self.outdir, regextype, bounding_range, benchname)
     reg2smt2_cmd = f"{os.path.join(basedir, '../reg2script/src/reg2smt')} {filename}  -inter -o {outdir} -lenbound {lenbound}"
-    print(reg2smt2_cmd)
     subprocess.run(reg2smt2_cmd, shell=True)
     
 
