@@ -85,8 +85,6 @@ exception Unsupport of string ;;
 %token <string >Lbackref
 
 %left Lalt
-%nonassoc Lcaret
-%nonassoc Ldoller
 %left CONCAT
 %nonassoc Lcomma
 %nonassoc Lword Lnword
@@ -102,6 +100,7 @@ exception Unsupport of string ;;
 %left LlParen LrParen Loptloop
 %nonassoc Latom
 %left Lrange
+%nonassoc Lcaret Ldoller
 
 
 
@@ -142,8 +141,8 @@ regexi :
   //  | regexi LlParen Latom LrParen	 	 {Lloop ($1, 0, (int_of_string $3))}
    | Llparen Loption Lexc regexi Lrparen    	 {print_string "lookbhind"; raise (ParseASTError "not support for lookbehind")}
    | Llparen Loption Lequal regexi Lrparen    	 {print_string "lookahead"; raise (ParseASTError "not support for lookahead")}
-   | Lcaret  	     	    	   		 {Atom AnchStart}
-   | Ldoller  	     	    	   		 {Atom AnchEnd}
+   | Lcaret regexi	     	    	   {$2}
+   | regexi Ldoller  	     	    	 {$1}
 
 
 
