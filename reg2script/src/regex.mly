@@ -84,7 +84,6 @@ exception Unsupport of string ;;
 %token Lcomma
 %token <string >Lbackref
 
-
 %left Lalt
 %nonassoc Lcaret
 %nonassoc Ldoller
@@ -225,28 +224,10 @@ rsymbol:
    | Lcaret			 {Atom (Slit "^")}
    | Ldoller			 {Atom (Slit "$")}
 
-rangesymbol:
-     Latom                       {$1}
-   | Ldot 			 {"."}
-   | Lexc			 {"!"}
-   | Lequal			 {"="}
-   | Lcolon			 {":"}
-   | Lcomma			 {","}
-   | Lstar 	  		 {"*"}
-   | Loption			 {"?"}
-   | Lalt			 {"|"}
-   | Lplus			 {"+"}
-   | Llparen			 {"("}
-   | Lrparen			 {")"}
-   | Lcaret			 {"^"}
-   | Ldoller			 {"$"}
-
-
 range:
-     rsymbol			 {$1}
-   | Latom Lrange Latom   {Atom (Srange ($1,$3))}
-
-   
+   | Latom Lrange Latom  {Atom (Srange ($1,$3))}
+   | Latom Lrange  %prec Lalt {Alt (Atom (Slit $1), Atom (Slit "-"))}
+   | rsymbol			 {$1}
 
 ranges:
       range			  {[$1]}

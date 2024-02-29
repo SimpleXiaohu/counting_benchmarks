@@ -1,7 +1,7 @@
 import sys, re, argparse, os, json
 from runner import RunnerInterface
 from dataclasses import dataclass
-from util import regexesCountLine
+from utils import regexesCountLine
 
 def isSmallCountRegex(regex: str):
     (isLarge, haveLoop, _) = regexesCountLine(regex)

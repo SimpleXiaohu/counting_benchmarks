@@ -2,7 +2,7 @@
 reg2smt: regast.ml  main.ml regexlex.mll regex.mly 
 	ocamlc -c regast.ml
 	ocamllex regexlex.mll
-	ocamlyacc regex.mly
+	ocamlyacc -v regex.mly
 	ocamlc -c regex.mli
 	ocamlc -c regex.ml
 	ocamlc -c regexlex.ml

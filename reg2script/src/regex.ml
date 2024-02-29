@@ -131,8 +131,7 @@ let yylhs = "\255\255\
 \005\000\005\000\005\000\005\000\005\000\005\000\005\000\005\000\
 \005\000\005\000\005\000\005\000\005\000\005\000\005\000\005\000\
 \005\000\005\000\005\000\005\000\005\000\006\000\006\000\006\000\
-\006\000\006\000\006\000\006\000\006\000\006\000\006\000\006\000\
-\006\000\006\000\006\000\007\000\007\000\004\000\004\000\000\000"
+\004\000\004\000\000\000"
 
 let yylen = "\002\000\
 \002\000\001\000\003\000\003\000\004\000\004\000\006\000\006\000\
@@ -142,26 +141,25 @@ let yylen = "\002\000\
 \001\000\001\000\001\000\001\000\001\000\001\000\001\000\001\000\
 \001\000\001\000\001\000\001\000\001\000\001\000\001\000\001\000\
 \001\000\001\000\001\000\001\000\001\000\001\000\001\000\001\000\
-\001\000\001\000\001\000\001\000\001\000\001\000\001\000\001\000\
-\001\000\001\000\001\000\001\000\001\000\001\000\001\000\001\000\
-\001\000\001\000\001\000\001\000\003\000\001\000\002\000\002\000"
+\001\000\001\000\001\000\001\000\001\000\003\000\002\000\001\000\
+\001\000\002\000\002\000"
 
 let yydefred = "\000\000\
 \000\000\000\000\026\000\035\000\000\000\000\000\028\000\029\000\
 \030\000\031\000\032\000\024\000\033\000\034\000\025\000\036\000\
-\037\000\038\000\039\000\027\000\080\000\000\000\002\000\000\000\
+\037\000\038\000\039\000\027\000\067\000\000\000\002\000\000\000\
 \049\000\054\000\057\000\056\000\058\000\059\000\042\000\043\000\
 \044\000\045\000\046\000\055\000\060\000\047\000\048\000\061\000\
-\050\000\051\000\052\000\053\000\041\000\000\000\076\000\000\000\
+\050\000\051\000\052\000\053\000\041\000\000\000\064\000\000\000\
 \000\000\000\000\000\000\009\000\010\000\017\000\016\000\000\000\
-\001\000\014\000\015\000\000\000\000\000\000\000\003\000\079\000\
+\001\000\014\000\015\000\000\000\000\000\000\000\003\000\066\000\
 \000\000\000\000\000\000\000\000\000\000\012\000\000\000\000\000\
-\077\000\006\000\000\000\000\000\000\000\000\000\005\000\021\000\
+\062\000\006\000\000\000\000\000\000\000\000\000\005\000\021\000\
 \000\000\022\000\023\000\000\000\000\000\013\000\000\000\020\000\
 \008\000\007\000\018\000\019\000"
 
 let yydgoto = "\002\000\
-\021\000\061\000\023\000\046\000\047\000\000\000\048\000"
+\021\000\061\000\023\000\046\000\047\000\048\000"
 
 let yysindex = "\003\000\
 \239\000\000\000\000\000\000\000\044\000\131\000\000\000\000\000\
@@ -185,16 +183,16 @@ let yyrindex = "\000\000\
 \000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\
 \000\000\000\000\000\000\000\000\000\000\000\000\000\000\046\255\
 \000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\
-\000\000\000\000\000\000\000\000\029\255\000\000\000\000\000\000\
+\000\000\000\000\000\000\000\000\029\255\010\001\000\000\000\000\
 \000\000\000\000\000\000\000\000\000\000\000\000\033\255\000\000\
 \000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\
 \000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\
 \000\000\000\000\000\000\000\000"
 
 let yygindex = "\000\000\
-\000\000\255\255\000\000\254\255\000\000\000\000\000\000"
+\000\000\255\255\000\000\254\255\000\000\000\000"
 
-let yytablesize = 527
+let yytablesize = 554
 let yytable = "\022\000\
 \066\000\067\000\068\000\001\000\051\000\003\000\004\000\052\000\
 \053\000\054\000\055\000\005\000\087\000\056\000\006\000\091\000\
@@ -202,7 +200,7 @@ let yytable = "\022\000\
 \059\000\012\000\013\000\014\000\015\000\016\000\017\000\018\000\
 \060\000\062\000\063\000\019\000\020\000\011\000\072\000\011\000\
 \088\000\004\000\011\000\004\000\073\000\064\000\004\000\065\000\
-\080\000\011\000\081\000\000\000\011\000\078\000\071\000\000\000\
+\080\000\011\000\081\000\000\000\011\000\065\000\071\000\000\000\
 \000\000\000\000\000\000\011\000\000\000\000\000\000\000\000\000\
 \075\000\076\000\078\000\071\000\000\000\000\000\000\000\000\000\
 \000\000\000\000\000\000\084\000\003\000\004\000\052\000\053\000\
@@ -261,7 +259,11 @@ let yytable = "\022\000\
 \004\000\000\000\019\000\020\000\000\000\005\000\000\000\000\000\
 \006\000\000\000\000\000\007\000\000\000\008\000\009\000\010\000\
 \011\000\000\000\000\000\012\000\013\000\014\000\015\000\016\000\
-\017\000\018\000\000\000\000\000\000\000\019\000\020\000"
+\017\000\018\000\000\000\063\000\063\000\019\000\020\000\063\000\
+\000\000\063\000\063\000\063\000\063\000\000\000\063\000\000\000\
+\063\000\063\000\063\000\063\000\063\000\000\000\063\000\063\000\
+\063\000\063\000\063\000\063\000\063\000\000\000\000\000\000\000\
+\063\000\063\000"
 
 let yycheck = "\001\000\
 \025\001\026\001\027\001\001\000\006\000\001\001\002\001\003\001\
@@ -329,7 +331,11 @@ let yycheck = "\001\000\
 \002\001\255\255\031\001\032\001\255\255\007\001\255\255\255\255\
 \010\001\255\255\255\255\013\001\255\255\015\001\016\001\017\001\
 \018\001\255\255\255\255\021\001\022\001\023\001\024\001\025\001\
-\026\001\027\001\255\255\255\255\255\255\031\001\032\001"
+\026\001\027\001\255\255\002\001\003\001\031\001\032\001\006\001\
+\255\255\008\001\009\001\010\001\011\001\255\255\013\001\255\255\
+\015\001\016\001\017\001\018\001\019\001\255\255\021\001\022\001\
+\023\001\024\001\025\001\026\001\027\001\255\255\255\255\255\255\
+\031\001\032\001"
 
 let yynames_const = "\
   Ldot\000\
@@ -374,226 +380,226 @@ let yyact = [|
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     Obj.repr(
-# 115 "regex.mly"
+# 114 "regex.mly"
                             (_1)
-# 380 "regex.ml"
+# 386 "regex.ml"
                : Regast.regAST))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 0 : 'symbol) in
     Obj.repr(
-# 119 "regex.mly"
+# 118 "regex.mly"
                (_1)
-# 387 "regex.ml"
+# 393 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _2 = (Parsing.peek_val __caml_parser_env 1 : 'ranges) in
     Obj.repr(
-# 120 "regex.mly"
+# 119 "regex.mly"
                                     (processRange _2)
-# 394 "regex.ml"
+# 400 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 2 : 'regexi) in
     let _3 = (Parsing.peek_val __caml_parser_env 0 : 'regexi) in
     Obj.repr(
-# 121 "regex.mly"
+# 120 "regex.mly"
                                     (Alt (_1,_3))
-# 402 "regex.ml"
+# 408 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _2 = (Parsing.peek_val __caml_parser_env 2 : 'regexi) in
     Obj.repr(
-# 122 "regex.mly"
+# 121 "regex.mly"
                                  (Capture (Alt (Concat (Atom EmptyW, _2), Atom EmptyW)))
-# 409 "regex.ml"
+# 415 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _3 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     Obj.repr(
-# 123 "regex.mly"
+# 122 "regex.mly"
                                  (Capture (Alt (Atom EmptyW, Concat (Atom EmptyW, _3))))
-# 416 "regex.ml"
+# 422 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _4 = (Parsing.peek_val __caml_parser_env 2 : 'regexi) in
     Obj.repr(
-# 124 "regex.mly"
+# 123 "regex.mly"
                                                    (Alt (Concat (Atom EmptyW, _4), Atom EmptyW))
-# 423 "regex.ml"
+# 429 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _5 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     Obj.repr(
-# 125 "regex.mly"
+# 124 "regex.mly"
                                                    (Alt (Concat (Atom EmptyW, _5), Atom EmptyW))
-# 430 "regex.ml"
+# 436 "regex.ml"
+               : 'regexi))
+; (fun __caml_parser_env ->
+    let _1 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
+    Obj.repr(
+# 125 "regex.mly"
+                                        (Kstar _1)
+# 443 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     Obj.repr(
 # 126 "regex.mly"
-                                        (Kstar _1)
-# 437 "regex.ml"
-               : 'regexi))
-; (fun __caml_parser_env ->
-    let _1 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
-    Obj.repr(
-# 127 "regex.mly"
                                         (LKstar _1)
-# 444 "regex.ml"
+# 450 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     let _2 = (Parsing.peek_val __caml_parser_env 0 : 'regexi) in
     Obj.repr(
-# 128 "regex.mly"
+# 127 "regex.mly"
                                         (Concat (_1,_2))
-# 452 "regex.ml"
+# 458 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _2 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     Obj.repr(
-# 129 "regex.mly"
+# 128 "regex.mly"
                                         (Capture _2)
-# 459 "regex.ml"
+# 465 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _4 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     Obj.repr(
-# 130 "regex.mly"
+# 129 "regex.mly"
                                                  (_4)
-# 466 "regex.ml"
+# 472 "regex.ml"
+               : 'regexi))
+; (fun __caml_parser_env ->
+    let _1 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
+    Obj.repr(
+# 130 "regex.mly"
+                                        (Loption _1)
+# 479 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     Obj.repr(
 # 131 "regex.mly"
-                                        (Loption _1)
-# 473 "regex.ml"
+                                                 (Lopt _1)
+# 486 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     Obj.repr(
 # 132 "regex.mly"
-                                                 (Lopt _1)
-# 480 "regex.ml"
+                             (Kplus _1)
+# 493 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     Obj.repr(
 # 133 "regex.mly"
-                             (Kplus _1)
-# 487 "regex.ml"
+                              (LKplus _1)
+# 500 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
-    let _1 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
+    let _1 = (Parsing.peek_val __caml_parser_env 5 : 'regexi) in
+    let _3 = (Parsing.peek_val __caml_parser_env 3 : string) in
+    let _5 = (Parsing.peek_val __caml_parser_env 1 : string) in
     Obj.repr(
 # 134 "regex.mly"
-                              (LKplus _1)
-# 494 "regex.ml"
-               : 'regexi))
-; (fun __caml_parser_env ->
-    let _1 = (Parsing.peek_val __caml_parser_env 5 : 'regexi) in
-    let _3 = (Parsing.peek_val __caml_parser_env 3 : string) in
-    let _5 = (Parsing.peek_val __caml_parser_env 1 : string) in
-    Obj.repr(
-# 135 "regex.mly"
                                                  (Lloop (_1, (int_of_string _3), (int_of_string _5)))
-# 503 "regex.ml"
+# 509 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 5 : 'regexi) in
     let _3 = (Parsing.peek_val __caml_parser_env 3 : string) in
     let _5 = (Parsing.peek_val __caml_parser_env 1 : string) in
     Obj.repr(
-# 137 "regex.mly"
+# 136 "regex.mly"
        (Llloop (_1, (int_of_string _3), (int_of_string _5)))
-# 512 "regex.ml"
+# 518 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 4 : 'regexi) in
     let _3 = (Parsing.peek_val __caml_parser_env 2 : string) in
     Obj.repr(
-# 139 "regex.mly"
+# 138 "regex.mly"
                                           (Concat (Kstar _1, (Lloop (_1, (int_of_string _3), (int_of_string _3)))))
-# 520 "regex.ml"
+# 526 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 3 : 'regexi) in
     let _3 = (Parsing.peek_val __caml_parser_env 1 : string) in
     Obj.repr(
-# 141 "regex.mly"
+# 140 "regex.mly"
                                      (Lloop (_1, (int_of_string _3),(int_of_string _3)))
-# 528 "regex.ml"
+# 534 "regex.ml"
+               : 'regexi))
+; (fun __caml_parser_env ->
+    let _4 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
+    Obj.repr(
+# 142 "regex.mly"
+                                              (print_string "lookbhind"; raise (ParseASTError "not support for lookbehind"))
+# 541 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _4 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
     Obj.repr(
 # 143 "regex.mly"
-                                              (print_string "lookbhind"; raise (ParseASTError "not support for lookbehind"))
-# 535 "regex.ml"
-               : 'regexi))
-; (fun __caml_parser_env ->
-    let _4 = (Parsing.peek_val __caml_parser_env 1 : 'regexi) in
-    Obj.repr(
-# 144 "regex.mly"
                                                 (print_string "lookahead"; raise (ParseASTError "not support for lookahead"))
-# 542 "regex.ml"
-               : 'regexi))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 145 "regex.mly"
-                               (Atom AnchStart)
 # 548 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 146 "regex.mly"
-                                (Atom AnchEnd)
+# 144 "regex.mly"
+                               (Atom AnchStart)
 # 554 "regex.ml"
+               : 'regexi))
+; (fun __caml_parser_env ->
+    Obj.repr(
+# 145 "regex.mly"
+                                (Atom AnchEnd)
+# 560 "regex.ml"
                : 'regexi))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 0 : string) in
     Obj.repr(
-# 151 "regex.mly"
+# 150 "regex.mly"
                                  (Atom (Slit _1))
-# 561 "regex.ml"
+# 567 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 0 : string ) in
     Obj.repr(
-# 152 "regex.mly"
+# 151 "regex.mly"
                  (LBR (String.sub _1 1 (String.length _1 -1)))
-# 568 "regex.ml"
-               : 'symbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 153 "regex.mly"
-                (Atom (Slit "-"))
 # 574 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 154 "regex.mly"
+# 152 "regex.mly"
+                (Atom (Slit "-"))
+# 580 "regex.ml"
+               : 'symbol))
+; (fun __caml_parser_env ->
+    Obj.repr(
+# 153 "regex.mly"
                                  (regexesAlt [Atom (Srange ("a", "z")) ;
                                               Atom (Srange ("A", "Z")) ;
                                               Atom (Srange ("0", "9"));
                                               Atom (Slit "_")])
-# 583 "regex.ml"
+# 589 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 158 "regex.mly"
+# 157 "regex.mly"
                                  (Atom (constructand (negranges
                                              [Atom (Srange ("a", "z")) ;
                                               Atom (Srange ("A", "Z")) ;
                                               Atom (Srange ("0", "9"));
                                               Atom (Slit "_")])))
-# 593 "regex.ml"
+# 599 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 163 "regex.mly"
+# 162 "regex.mly"
                 (regexesAlt [Atom (Slit " ") ;
      				 	      Atom (Slit "\\u{0b}") ;
                                               Atom (Slit "\\u{0a}") ;
@@ -601,103 +607,103 @@ let yyact = [|
                                               Atom (Slit "\\u{09}") ;
                                               Atom (Slit "\\u{0c}") ;
                                               ])
-# 605 "regex.ml"
+# 611 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 170 "regex.mly"
+# 169 "regex.mly"
                                  (Atom (Sand ((Sneg (Slit "\\u{20}")),
                                        (Sand ((Sneg (Slit "\\u{0a}")),
 				       (Sand ((Sneg (Slit "\\u{0b}")),
                                        (Sand ((Sneg (Slit "\\u{0d}")),
 				       (Sand ((Sneg (Slit "\\u{09}")),
                                        (Sneg (Slit "\\u{0c}")))))))))))))
-# 616 "regex.ml"
-               : 'symbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 177 "regex.mly"
-               (Atom (Srange ("0", "9")))
 # 622 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 178 "regex.mly"
-                (Atom (Sneg (Srange ("0","9"))))
+# 176 "regex.mly"
+               (Atom (Srange ("0", "9")))
 # 628 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 179 "regex.mly"
-              (Atom Wild)
+# 177 "regex.mly"
+                (Atom (Sneg (Srange ("0","9"))))
 # 634 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 180 "regex.mly"
-             (Atom (Slit "!"))
+# 178 "regex.mly"
+              (Atom Wild)
 # 640 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 181 "regex.mly"
-               (Atom (Slit "="))
+# 179 "regex.mly"
+             (Atom (Slit "!"))
 # 646 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 182 "regex.mly"
-               (Atom (Slit ":"))
+# 180 "regex.mly"
+               (Atom (Slit "="))
 # 652 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 183 "regex.mly"
-               (Atom (Slit ","))
+# 181 "regex.mly"
+               (Atom (Slit ":"))
 # 658 "regex.ml"
+               : 'symbol))
+; (fun __caml_parser_env ->
+    Obj.repr(
+# 182 "regex.mly"
+               (Atom (Slit ","))
+# 664 "regex.ml"
                : 'symbol))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 0 : string) in
     Obj.repr(
-# 186 "regex.mly"
+# 185 "regex.mly"
                                  (Atom (Slit _1))
-# 665 "regex.ml"
+# 671 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 0 : string ) in
     Obj.repr(
-# 187 "regex.mly"
+# 186 "regex.mly"
                  (LBR (String.sub _1 1 (String.length _1 -1)))
-# 672 "regex.ml"
-               : 'rsymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 188 "regex.mly"
-                (Atom (Slit "-"))
 # 678 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 189 "regex.mly"
+# 187 "regex.mly"
+                (Atom (Slit "-"))
+# 684 "regex.ml"
+               : 'rsymbol))
+; (fun __caml_parser_env ->
+    Obj.repr(
+# 188 "regex.mly"
                                  (regexesAlt [Atom (Srange ("a", "z")) ;
                                               Atom (Srange ("A", "Z")) ;
                                               Atom (Srange ("0", "9"));
                                               Atom (Slit "_")])
-# 687 "regex.ml"
+# 693 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 193 "regex.mly"
+# 192 "regex.mly"
                                  (Atom (constructand (negranges
                                              [Atom (Srange ("a", "z")) ;
                                               Atom (Srange ("A", "Z")) ;
                                               Atom (Srange ("0", "9"));
                                               Atom (Slit "_")])))
-# 697 "regex.ml"
+# 703 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 198 "regex.mly"
+# 197 "regex.mly"
                 (regexesAlt [Atom (Slit "\\u{20}") ;
      				 	      Atom (Slit "\\u{0b}") ;
                                               Atom (Slit "\\u{0a}") ;
@@ -705,223 +711,145 @@ let yyact = [|
                                               Atom (Slit "\\u{09}") ;
                                               Atom (Slit "\\u{0c}") ;
                                               ])
-# 709 "regex.ml"
+# 715 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 205 "regex.mly"
+# 204 "regex.mly"
                                  (Atom (Sand ((Sneg (Slit "\\u{20}")),
                                        (Sand ((Sneg (Slit "\\u{0a}")),
 				       (Sand ((Sneg (Slit "\\u{0b}")),
                                        (Sand ((Sneg (Slit "\\u{0d}")),
 				       (Sand ((Sneg (Slit "\\u{09}")),
                                        (Sneg (Slit "\\u{0c}")))))))))))))
-# 720 "regex.ml"
-               : 'rsymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 212 "regex.mly"
-               (Atom (Srange ("0", "9")))
 # 726 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 213 "regex.mly"
-                (Atom (Sneg (Srange ("0","9"))))
+# 211 "regex.mly"
+               (Atom (Srange ("0", "9")))
 # 732 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 214 "regex.mly"
-              (Atom (Slit "."))
+# 212 "regex.mly"
+                (Atom (Sneg (Srange ("0","9"))))
 # 738 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 215 "regex.mly"
-             (Atom (Slit "!"))
+# 213 "regex.mly"
+              (Atom (Slit "."))
 # 744 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 216 "regex.mly"
-               (Atom (Slit "="))
+# 214 "regex.mly"
+             (Atom (Slit "!"))
 # 750 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 217 "regex.mly"
-               (Atom (Slit ":"))
+# 215 "regex.mly"
+               (Atom (Slit "="))
 # 756 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 218 "regex.mly"
-               (Atom (Slit ","))
+# 216 "regex.mly"
+               (Atom (Slit ":"))
 # 762 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 219 "regex.mly"
-                 (Atom (Slit "*"))
+# 217 "regex.mly"
+               (Atom (Slit ","))
 # 768 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 220 "regex.mly"
-                (Atom (Slit "?"))
+# 218 "regex.mly"
+                 (Atom (Slit "*"))
 # 774 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 221 "regex.mly"
-             (Atom (Slit "|"))
+# 219 "regex.mly"
+                (Atom (Slit "?"))
 # 780 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 222 "regex.mly"
-              (Atom (Slit "+"))
+# 220 "regex.mly"
+             (Atom (Slit "|"))
 # 786 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 223 "regex.mly"
-                (Atom (Slit "("))
+# 221 "regex.mly"
+              (Atom (Slit "+"))
 # 792 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 224 "regex.mly"
-                (Atom (Slit ")"))
+# 222 "regex.mly"
+                (Atom (Slit "("))
 # 798 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 225 "regex.mly"
-               (Atom (Slit "^"))
+# 223 "regex.mly"
+                (Atom (Slit ")"))
 # 804 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
     Obj.repr(
-# 226 "regex.mly"
-                (Atom (Slit "$"))
+# 224 "regex.mly"
+               (Atom (Slit "^"))
 # 810 "regex.ml"
                : 'rsymbol))
 ; (fun __caml_parser_env ->
-    let _1 = (Parsing.peek_val __caml_parser_env 0 : string) in
     Obj.repr(
-# 229 "regex.mly"
-                                 (_1)
-# 817 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 230 "regex.mly"
-              (".")
-# 823 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 231 "regex.mly"
-             ("!")
-# 829 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 232 "regex.mly"
-               ("=")
-# 835 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 233 "regex.mly"
-               (":")
-# 841 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 234 "regex.mly"
-               (",")
-# 847 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 235 "regex.mly"
-                 ("*")
-# 853 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 236 "regex.mly"
-                ("?")
-# 859 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 237 "regex.mly"
-             ("|")
-# 865 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 238 "regex.mly"
-              ("+")
-# 871 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 239 "regex.mly"
-                ("(")
-# 877 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 240 "regex.mly"
-                (")")
-# 883 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 241 "regex.mly"
-               ("^")
-# 889 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    Obj.repr(
-# 242 "regex.mly"
-                ("$")
-# 895 "regex.ml"
-               : 'rangesymbol))
-; (fun __caml_parser_env ->
-    let _1 = (Parsing.peek_val __caml_parser_env 0 : 'rsymbol) in
-    Obj.repr(
-# 246 "regex.mly"
-                (_1)
-# 902 "regex.ml"
-               : 'range))
+# 225 "regex.mly"
+                (Atom (Slit "$"))
+# 816 "regex.ml"
+               : 'rsymbol))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 2 : string) in
     let _3 = (Parsing.peek_val __caml_parser_env 0 : string) in
     Obj.repr(
-# 247 "regex.mly"
-                          (Atom (Srange (_1,_3)))
-# 910 "regex.ml"
+# 228 "regex.mly"
+                         (Atom (Srange (_1,_3)))
+# 824 "regex.ml"
+               : 'range))
+; (fun __caml_parser_env ->
+    let _1 = (Parsing.peek_val __caml_parser_env 1 : string) in
+    Obj.repr(
+# 229 "regex.mly"
+                              (Alt (Atom (Slit _1), Atom (Slit "-")))
+# 831 "regex.ml"
+               : 'range))
+; (fun __caml_parser_env ->
+    let _1 = (Parsing.peek_val __caml_parser_env 0 : 'rsymbol) in
+    Obj.repr(
+# 230 "regex.mly"
+                (_1)
+# 838 "regex.ml"
                : 'range))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 0 : 'range) in
     Obj.repr(
-# 252 "regex.mly"
+# 233 "regex.mly"
                 ([_1])
-# 917 "regex.ml"
+# 845 "regex.ml"
                : 'ranges))
 ; (fun __caml_parser_env ->
     let _1 = (Parsing.peek_val __caml_parser_env 1 : 'range) in
     let _2 = (Parsing.peek_val __caml_parser_env 0 : 'ranges) in
     Obj.repr(
-# 253 "regex.mly"
+# 234 "regex.mly"
                                   (_1 :: _2)
-# 925 "regex.ml"
+# 853 "regex.ml"
                : 'ranges))
 (* Entry regex *)
 ; (fun __caml_parser_env -> raise (Parsing.YYexit (Parsing.peek_val __caml_parser_env 0)))

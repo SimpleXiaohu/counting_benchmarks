@@ -14,7 +14,8 @@ let outputSingleof line =
     let lexbuf = Lexing.from_string (line ^ "\n") in
     let at = Regex.regex Regexlex.lexer lexbuf in
     print_string (fst (trantoPT 1 at))
-  with _ -> print_string (line ^ ":error\n")
+  with 
+  | excep -> print_string (line ^ " :error: " ^ (Printexc.to_string excep) ^ "\n")
 
 let genCountSMT s lenbound =
   "(declare-const X String)\n\
@@ -81,7 +82,8 @@ let outputSingleofTest line n =
     output_string outf (";test regex " ^ line ^ "\n");
     output_string outf (genSMT (fst (trantoPT 1 at)) !lenbound);
     close_out outf
-  with _ -> print_string (line ^ ":error\n")
+  with 
+  | excep -> print_string (line ^ " :error: " ^ (Printexc.to_string excep) ^ "\n")
 
 let cnnt = ref 0
 
