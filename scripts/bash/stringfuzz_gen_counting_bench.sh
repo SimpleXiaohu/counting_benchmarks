@@ -22,7 +22,7 @@ mkdir -p stringfuzz/nested_counting
 counter=1
 until [ $counter -gt $files_number ]
 do 
-  stringfuzzg -r -m regex -o tc -O alternating -d 3 -l 5 -u 20 -M 50 -t 4 > stringfuzz/nested_counting/nested_counting_$counter.smt2
+  stringfuzzg -r -m regex -o tc -O alternating -d 3 -l 5 -u 20 -M 50 -t 4 -D > stringfuzz/nested_counting/nested_counting_$counter.smt2
   progress_bar $counter $(echo "scale=2; $counter*100/$files_number" | bc)
   counter=$((counter+1))
 done
@@ -36,7 +36,7 @@ counter=1
 files_number1=$((files_number/5))
 until [ $counter -gt $files_number1 ]
 do 
-  stringfuzzg -r -m regex -o tcu -O alternating -d 3 -l 5 -u 200 -M 50 -t 4 -i not-in -r 2 > stringfuzz/complement_counting/complement_counting_$counter.smt2
+  stringfuzzg -r -m regex -o tcu -O alternating -d 3 -l 1 -u 66 -M 50 -t 4 -i not-in -r 2 > stringfuzz/complement_counting/complement_counting_$counter.smt2
   progress_bar $counter $(echo "scale=2; $counter*100/$files_number" | bc)
   counter=$((counter+1))
 done
@@ -44,7 +44,7 @@ done
 files_number2=$((files_number-files_number1))
 until [ $counter -gt $files_number ]
 do 
-  stringfuzzg -r -m regex -o tcu -O alternating -d 3 -l 5 -u 200 -M 50 -t 4 -i alternating -r 2 > stringfuzz/complement_counting/complement_counting_$counter.smt2
+  stringfuzzg -r -m regex -o tcu -O alternating -d 3 -l 1 -u 66 -M 50 -t 4 -i alternating -r 2 > stringfuzz/complement_counting/complement_counting_$counter.smt2
   progress_bar $counter $(echo "scale=2; $counter*100/$files_number" | bc)
   counter=$((counter+1))
 done

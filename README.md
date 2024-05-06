@@ -23,7 +23,7 @@ The python scripts used to generate string constraints.
 ## bash
 The bash scripts used to generate string constraints.
 
-- `stringfuzz_gen_counting_bench.sh` : The script to generate string constraints with counting operator by stringfuzz.
+- `stringfuzz_gen_counting_bench.sh` : The script to generate string constraints with counting operator by [stringfuzz](https://github.com/SimpleXiaohu/stringfuzz).
 
 # reg2script
 The tool to translate regexes to string constraints in smtlib2 format.
