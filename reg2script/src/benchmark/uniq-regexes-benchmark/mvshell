@@ -1,7 +1,0 @@
-#!/bin/sh
-
-for f in uniq-regexes-benchmark/*.smt2; do
-    mv $f benchmarks/benchmark-2/
-done
-
-rm -f *~

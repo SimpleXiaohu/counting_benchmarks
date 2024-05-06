@@ -1,8 +1,0 @@
-#!/bin/sh
-
-for f in benchmark/*.smt2; do
-    if grep -q re.diff "$f"; then
-	rm "$f"
-	rm "${f:0:${}}" 
-    fi
-done
